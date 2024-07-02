@@ -1,0 +1,81 @@
+{
+    "keyboard_name": "meipi",
+    "keyboard_folder": "rp2040",
+    "manufacturer": "hayashi",
+    "maintainer": "hayashi",
+    "url": "https://github.com/Taro-Hayashi/meipi/blob/main/README.md",
+    "usb": {
+        "vid": "0x8884",
+        "pid": "0x0896",
+        "device_version": "1.0.0"
+    },
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+    "features": {
+        "pointing_device": true,
+        "joystick": true,
+        "oled": true,
+        "rgb_matrix": true,
+        "encoder": true,
+        "extrakey": true,
+        "mousekey": true
+    },
+    "bootmagic": {
+        "enabled": true
+    },
+    "build": {
+        "lto": true
+    },
+    "matrix_pins": {
+        "cols": ["GP12", "GP13", "GP14"],
+        "rows": ["GP10", "GP11"]
+    },
+    "diode_direction": "COL2ROW",
+    "encoder": {
+        "rotary": [
+            { "pin_a": "GP18", "pin_b": "GP19", "resolution": 4}
+        ]
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+            { "label": "1", "matrix": [0, 0], "x": 1, "y": 0 },
+            { "label": "1", "matrix": [0, 1], "x": 1, "y": 0 },
+            { "label": "1", "matrix": [0, 2], "x": 1, "y": 0 },
+            { "label": "1", "matrix": [1, 0], "x": 1, "y": 0 },
+            { "label": "1", "matrix": [1, 1], "x": 1, "y": 0 },
+            { "label": "1", "matrix": [1, 2], "x": 1, "y": 0 }
+            ]
+        }
+    },
+    "rgb_matrix": {
+        "driver": "ws2812",
+        "animations": {
+            "gradient_left_right": true,
+            "raindrops": true,
+            "jellybean_raindrops": true,
+            "solid_reactive_wide": true
+        },
+        "max_brightness": 200,
+        "timeout": 1800000,
+        "hue_steps": 2,
+        "sat_steps": 2,
+        "val_steps": 2,
+        "speed_steps": 2,
+        "layout": [
+            { "flags": 2, "x": 135.4, "y": 40.7 },
+            { "flags": 2, "x": 123.1, "y": 40.7 },
+            { "flags": 2, "x": 110.7, "y": 40.7 },
+            { "flags": 4, "matrix": [0, 0], "x": 23.4, "y": 167 },
+            { "flags": 4, "matrix": [0, 1], "x": 70.2, "y": 167 },
+            { "flags": 4, "matrix": [0, 2], "x": 116.9, "y": 167 },
+            { "flags": 4, "matrix": [1, 0], "x": 23.4, "y": 89.6 },
+            { "flags": 4, "matrix": [1, 1], "x": 70.2, "y": 89.6 },
+            { "flags": 4, "matrix": [1, 2], "x": 116.9, "y": 89.6 },
+            { "flags": 2, "x": 46.8, "y": 167 },
+            { "flags": 2, "x": 93.5, "y": 167 },
+            { "flags": 2, "x": 46.8, "y": 89.6 },
+            { "flags": 2, "x": 93.5, "y": 89.6 }
+          ]
+    }
+}

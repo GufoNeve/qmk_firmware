@@ -1,0 +1,3 @@
+POINTING_DEVICE_DRIVER = custom
+RGB_MATRIX_CUSTOM_KB = yes
+SRC += i2c_master.c paw3204.c

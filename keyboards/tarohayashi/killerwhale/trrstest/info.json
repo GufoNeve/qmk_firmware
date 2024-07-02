@@ -1,0 +1,25 @@
+{
+    "keyboard_name": "KillerWhale TRRSTEST",
+    "manufacturer": "hayashi",
+    "maintainer": "hayashi",
+    "url": "",
+    "usb": {
+        "vid": "0x8884",
+        "pid": "0x0898",
+        "device_version": "1.0.0"
+    },
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+    "matrix_pins": {
+        "direct": [
+          ["GP1"]
+        ]
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {"matrix": [0, 0], "x": 0, "y": 0 }
+            ]
+        }
+    }
+}
