@@ -1,8 +1,8 @@
 {
     "manufacturer": "n",
-    "keyboard_name": "i_14",
-    "maintainer": "\u96ea\u689f",
-    "bootloader": "atmel-dfu",
+    "keyboard_name": "i_14_trackball_pad",
+    "maintainer": "fukuro",
+    "bootloader": "Press the button marked RESET on the back of the PCB",
     "diode_direction": "COL2ROW",
     "features": {
         "bootmagic": true,
