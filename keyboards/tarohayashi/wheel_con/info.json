@@ -1,0 +1,79 @@
+{
+    "keyboard_name": "Wheel con",
+    "manufacturer": "hayashi",
+    "maintainer": "hayashi",
+    "url": "https://github.com/Taro-Hayashi/wheelcon/blob/main/README.md",
+    "usb": {
+        "vid": "0x8884",
+        "pid": "0x0902",
+        "device_version": "1.0.0"
+    },
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+    "features": {
+        "extrakey": true,
+        "rgblight": true,
+        "midi": true
+    },
+    "matrix_pins": {
+        "direct": [
+            ["GP20", "GP16", "GP9", "GP12", "GP4" ]
+        ]
+    },
+    "bootmagic": {
+        "enabled": true
+    },
+    "encoder": {
+        "enabled": true,
+        "rotary": [
+            { "pin_a": "GP21", "pin_b": "GP19", "resolution": 4},
+            { "pin_a": "GP17", "pin_b": "GP18", "resolution": 4},
+            { "pin_a": "GP11", "pin_b": "GP10", "resolution": 4},
+            { "pin_a": "GP14", "pin_b": "GP15", "resolution": 4},
+            { "pin_a": "GP5", "pin_b": "GP7", "resolution": 4}
+        ]
+    },
+    "dynamic_keymap": {
+        "layer_count": 6
+    },
+    "build": {
+        "lto": true
+    },
+    "mouse_key": {
+        "enabled": true
+    },
+    "tapping": {
+        "hold_on_other_key_press": true
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                { "label": "1", "matrix": [0, 0], "x": 0, "y": 4 },
+                { "label": "2", "matrix": [0, 1], "x": 0, "y": 3 },
+                { "label": "3", "matrix": [0, 2], "x": 0, "y": 2 },
+                { "label": "4", "matrix": [0, 3], "x": 0, "y": 1 },
+                { "label": "5", "matrix": [0, 4], "x": 0, "y": 0 }
+            ]
+        }
+    },  
+    "ws2812": {
+        "pin": "GP0",
+        "driver": "vendor"
+    },
+    "rgblight": {
+        "led_count": 3,
+        "max_brightness": 190,
+        "animations": {
+            "alternating": true,
+            "breathing": true,
+            "christmas": true,
+            "knight": true,
+            "rainbow_mood": true,
+            "rainbow_swirl": true,
+            "rgb_test": true,
+            "snake": true,
+            "static_gradient": true,
+            "twinkle": true
+        }
+    }
+}

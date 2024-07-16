@@ -1,0 +1,123 @@
+{
+    "keyboard_name": "Onthe15mini",
+    "manufacturer": "hayashi",
+    "maintainer": "hayashi",
+    "url": "https://github.com/Taro-Hayashi/On-the-15-mini/blob/main/README.md",
+    "usb": {
+        "vid": "0x8884",
+        "pid": "0x0897",
+        "device_version": "1.0.0"
+    },
+    "processor": "atmega32u2",
+    "bootloader": "atmel-dfu",
+    "features": {
+        "extrakey": true,
+        "rgblight": true,
+        "midi": true
+    },
+    "bootmagic": {
+        "enabled": true
+    },
+    "matrix_pins": {
+        "custom": true,
+        "cols": ["D1", "D0", "C2", "B5", "B6", "B7", "C7", "C6", "D1", "D0", "C2", "B5", "B6", "B7", "C7", "C6"],
+        "rows": ["B0", "B1", "C5", "C4"]
+    },
+    "dynamic_keymap": {
+        "layer_count": 6
+    },
+    "build": {
+        "lto": true
+    },
+    "mouse_key": {
+        "enabled": true
+    },
+    "tapping": {
+        "hold_on_other_key_press": true
+    },
+    "diode_direction": "COL2ROW",
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                { "label": "00", "matrix": [0,0], "x": 0, "y": 0 },
+                { "label": "01", "matrix": [0,1], "x": 0, "y": 1 },
+                { "label": "02", "matrix": [0,2], "x": 0, "y": 2 },
+                { "label": "03", "matrix": [0,3], "x": 0, "y": 3 },
+                { "label": "04", "matrix": [0,4], "x": 0, "y": 4 },
+                { "label": "05", "matrix": [0,5], "x": 0, "y": 5 },
+                { "label": "06", "matrix": [0,6], "x": 0, "y": 6 },
+                { "label": "07", "matrix": [0,7], "x": 0, "y": 7 },
+                { "label": "08", "matrix": [0,8], "x": 0, "y": 8 },
+                { "label": "09", "matrix": [0,9], "x": 0, "y": 9 },
+                { "label": "10", "matrix": [0,10], "x": 0, "y": 10 },
+                { "label": "11", "matrix": [0,11], "x": 0, "y": 11 },
+                { "label": "12", "matrix": [0,12], "x": 0, "y": 12 },
+                { "label": "13", "matrix": [0,13], "x": 0, "y": 13 },
+                { "label": "14", "matrix": [0,14], "x": 0, "y": 14 },
+                { "label": "15", "matrix": [1,0], "x": 1, "y": 0 },
+                { "label": "16", "matrix": [1,1], "x": 1, "y": 1 },
+                { "label": "17", "matrix": [1,2], "x": 1, "y": 2 },
+                { "label": "18", "matrix": [1,3], "x": 1, "y": 3 },
+                { "label": "19", "matrix": [1,4], "x": 1, "y": 4 },
+                { "label": "20", "matrix": [1,5], "x": 1, "y": 5 },
+                { "label": "21", "matrix": [1,6], "x": 1, "y": 6 },
+                { "label": "22", "matrix": [1,7], "x": 1, "y": 7 },
+                { "label": "23", "matrix": [1,8], "x": 1, "y": 8 },
+                { "label": "24", "matrix": [1,9], "x": 1, "y": 9 },
+                { "label": "25", "matrix": [1,10], "x": 1, "y": 10 },
+                { "label": "26", "matrix": [1,11], "x": 1, "y": 11 },
+                { "label": "27", "matrix": [1,12], "x": 1, "y": 12 },
+                { "label": "28", "matrix": [1,13], "x": 1, "y": 13 },
+                { "label": "29", "matrix": [1,14], "x": 1, "y": 14 },
+                { "label": "30", "matrix": [2,0], "x": 2, "y": 0 },
+                { "label": "31", "matrix": [2,1], "x": 2, "y": 1 },
+                { "label": "32", "matrix": [2,2], "x": 2, "y": 2 },
+                { "label": "33", "matrix": [2,3], "x": 2, "y": 3 },
+                { "label": "34", "matrix": [2,4], "x": 2, "y": 4 },
+                { "label": "35", "matrix": [2,5], "x": 2, "y": 5 },
+                { "label": "36", "matrix": [2,6], "x": 2, "y": 6 },
+                { "label": "37", "matrix": [2,7], "x": 2, "y": 7 },
+                { "label": "38", "matrix": [2,8], "x": 2, "y": 8 },
+                { "label": "39", "matrix": [2,9], "x": 2, "y": 9 },
+                { "label": "40", "matrix": [2,10], "x": 2, "y": 10 },
+                { "label": "41", "matrix": [2,11], "x": 2, "y": 11 },
+                { "label": "42", "matrix": [2,12], "x": 2, "y": 12 },
+                { "label": "43", "matrix": [2,13], "x": 2, "y": 13 },
+                { "label": "44", "matrix": [2,14], "x": 2, "y": 14 },
+                { "label": "45", "matrix": [3,0], "x": 3, "y": 0 },
+                { "label": "46", "matrix": [3,1], "x": 3, "y": 1 },
+                { "label": "47", "matrix": [3,2], "x": 3, "y": 2 },
+                { "label": "48", "matrix": [3,3], "x": 3, "y": 3 },
+                { "label": "49", "matrix": [3,4], "x": 3, "y": 4 },
+                { "label": "50", "matrix": [3,5], "x": 3, "y": 5 },
+                { "label": "51", "matrix": [3,6], "x": 3, "y": 6 },
+                { "label": "52", "matrix": [3,7], "x": 3, "y": 7 },
+                { "label": "53", "matrix": [3,8], "x": 3, "y": 8 },
+                { "label": "54", "matrix": [3,9], "x": 3, "y": 9 },
+                { "label": "55", "matrix": [3,10], "x": 3, "y": 10 },
+                { "label": "56", "matrix": [3,11], "x": 3, "y": 11 },
+                { "label": "57", "matrix": [3,12], "x": 3, "y": 12 },
+                { "label": "58", "matrix": [3,13], "x": 3, "y": 13 },
+                { "label": "59", "matrix": [3,14], "x": 3, "y": 14 }
+            ]
+        }
+    },
+    "ws2812": {
+        "pin": "D2"
+    },
+    "rgblight": {
+        "led_count": 60,
+        "animations": {
+            "alternating": true,
+            "breathing": true,
+            "christmas": true,
+            "knight": true,
+            "rainbow_mood": true,
+            "rainbow_swirl": true,
+            "rgb_test": true,
+            "snake": true,
+            "static_gradient": true,
+            "twinkle": true
+        }
+    }
+}

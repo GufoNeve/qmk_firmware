@@ -1,0 +1,81 @@
+{
+    "keyboard_name": "ArmorsKEYPAD",
+    "manufacturer": "hayashi",
+    "maintainer": "hayashi",
+    "url": "",
+    "usb": {
+        "vid": "0xFEED",
+        "pid": "0x0885",
+        "device_version": "1.0.0"
+    },
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+    "features": {
+        "extrakey": true,
+        "rgblight": true,
+        "midi": true
+    },
+    "mouse_key": {
+        "enabled": true
+    },
+    "tapping": {
+        "hold_on_other_key_press": true
+    },
+    "bootmagic": {
+        "enabled": true,
+        "matrix": [0, 4]
+    },
+    "matrix_pins": {
+        "cols": ["GP0", "GP7", "GP6", "GP29", "GP28", "GP27"],
+        "rows": ["GP1", "GP2", "GP4"]
+    },
+    "diode_direction": "COL2ROW",
+    "dynamic_keymap": {
+        "layer_count": 6
+    },
+    "rgblight": {
+        "led_count": 20,
+        "max_brightness": 200,
+        "animations": {
+            "alternating": true,
+            "breathing": true,
+            "christmas": true,
+            "knight": true,
+            "rainbow_mood": true,
+            "rainbow_swirl": true,
+            "rgb_test": true,
+            "snake": true,
+            "static_gradient": true,
+            "twinkle": true
+        }
+    },
+    "ws2812": {
+        "pin": "GP26",
+        "driver": "vendor"
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                { "label": "", "matrix": [0, 0], "x": 0, "y": 0 },
+                { "label": "", "matrix": [0, 1], "x": 1, "y": 0 },
+                { "label": "", "matrix": [0, 2], "x": 2, "y": 0 },
+                { "label": "", "matrix": [0, 3], "x": 3, "y": 0 },
+                { "label": "", "matrix": [0, 4], "x": 4, "y": 0 },
+
+                { "label": "", "matrix": [1, 0], "x": 0, "y": 1 },
+                { "label": "", "matrix": [1, 1], "x": 1, "y": 1 },
+                { "label": "", "matrix": [1, 2], "x": 2, "y": 1 },
+                { "label": "", "matrix": [1, 3], "x": 3, "y": 1 },
+                { "label": "", "matrix": [1, 4], "x": 4, "y": 1 },
+                { "label": "", "matrix": [1, 5], "x": 5, "y": 1 },
+
+                { "label": "", "matrix": [2, 0], "x": 0, "y": 2 },
+                { "label": "", "matrix": [2, 1], "x": 1, "y": 2 },
+                { "label": "", "matrix": [2, 2], "x": 2, "y": 2 },
+                { "label": "", "matrix": [2, 3], "x": 3, "y": 2 },
+                { "label": "", "matrix": [2, 4], "x": 4, "y": 2 },
+                { "label": "", "matrix": [2, 5], "x": 5, "y": 2 }
+            ]
+        }
+    }
+}

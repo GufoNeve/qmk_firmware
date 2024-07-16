@@ -1,0 +1,83 @@
+{
+    "keyboard_name": "Undertow",
+    "manufacturer": "hayashi",
+    "maintainer": "hayashi",
+    "url": "",
+    "usb": {
+        "vid": "0x8884",
+        "pid": "0x0900",
+        "device_version": "1.0.0"
+    },
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+    "features": {
+        "extrakey": true,
+        "pointing_device": true,
+        "oled": true,
+        "rgblight": true,
+        "midi": true,
+        "mouse_key": true,
+        "bootmagic": true,
+        "encoder": true
+    },
+    "tapping": {
+        "hold_on_other_key_press": true
+    },
+    "bootmagic": {
+        "matrix": [4, 5]
+    },
+    "matrix_pins": {
+        "cols": ["GP27", "GP26", "GP15", "GP14", "GP13", "GP12", "GP11", "GP10"],
+        "rows": ["GP27", "GP26", "GP15", "GP14", "GP13", "GP12", "GP11", "GP10"]
+    },
+    "diode_direction": "COL2ROW",
+    "dynamic_keymap": {
+        "layer_count": 10
+    },
+    "rgblight": {
+        "led_count": 3,
+        "max_brightness": 220,
+        "animations": {
+            "alternating": true,
+            "breathing": true,
+            "christmas": true,
+            "knight": true,
+            "rainbow_mood": true,
+            "rainbow_swirl": true,
+            "rgb_test": true,
+            "snake": true,
+            "static_gradient": true,
+            "twinkle": true
+        }
+    },
+    "ws2812": {
+        "pin": "GP0",
+        "driver": "vendor"
+    },
+    "encoder": {
+        "rotary": [
+            { "pin_a": "GP6", "pin_b": "GP7", "resolution": 2}
+        ]
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                { "matrix": [5, 4], "x": 0, "y": 0 },
+                { "matrix": [4, 5], "x": 0, "y": 0 },
+                { "matrix": [0, 5], "x": 0, "y": 0 },
+                { "matrix": [1, 5], "x": 0, "y": 0 },
+                { "matrix": [2, 5], "x": 0, "y": 0 },
+                { "matrix": [3, 5], "x": 0, "y": 0 },
+                { "matrix": [6, 5], "x": 0, "y": 0 },
+
+                { "matrix": [7, 6], "x": 0, "y": 0 },
+                { "matrix": [6, 7], "x": 0, "y": 0 },
+                { "matrix": [0, 7], "x": 0, "y": 0 },
+                { "matrix": [1, 7], "x": 0, "y": 0 },
+                { "matrix": [2, 7], "x": 0, "y": 0 },
+                { "matrix": [3, 7], "x": 0, "y": 0 },
+                { "matrix": [4, 7], "x": 0, "y": 0 }
+            ]
+        }
+    }
+}
