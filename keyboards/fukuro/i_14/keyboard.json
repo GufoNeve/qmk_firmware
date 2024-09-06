@@ -5,16 +5,17 @@
     "bootloader": "Press the button marked RESET on the back of the PCB",
     "diode_direction": "COL2ROW",
     "features": {
-        "bootmagic": true,
-        "command": false,
-        "console": false,
-        "extrakey": true,
-        "mousekey": true,
-        "nkro": true
+        "bootmagic":    false,
+        "command":      false,
+        "console":      false,
+        "extrakey":     true,
+        "mousekey":     true,
+        "nkro":         true,
+        "rgb_matrix":   true
     },
     "matrix_pins": {
-        "cols": ["C2", "C2", "C2", "C2"],
-        "rows": ["D1", "D1", "D1", "D1"]
+        "cols": ["E6",  "D7",  "E6",  "D7"],
+        "rows": ["B4", "B5", "F6", "F7", "GP11", "GP10", "GP9",  "GP8"]
     },
     "processor": "atmega32u4",
     "url": "",
@@ -22,6 +23,12 @@
         "device_version": "1.0.0",
         "pid": "0x0000",
         "vid": "0xFEED"
+    },
+    "encoder": {
+        "rotary": [
+            {"pin_a": "D4", "pin_b": "C6", "resolution": 3},
+            {"pin_a": "F4", "pin_b": "F5", "resolution": 3}
+        ]
     },
     "layouts": {
         "LAYOUT": {
@@ -44,5 +51,11 @@
                 {"matrix": [3, 3], "x": 3, "y": 3}
             ]
         }
+    },
+    "ws2812": {
+        "pin": "D3",
+        "driver": "vendor"
     }
+    
+    
 }
