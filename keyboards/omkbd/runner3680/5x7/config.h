@@ -17,6 +17,7 @@
 #pragma once
 
 #define SELECT_SOFT_SERIAL_SPEED 1
+#define MASTER_RIGHT
 /*Sets the protocol speed when using serial communication*/
 //Speeds:
 //0: about 189kbps (Experimental only)
