@@ -9,6 +9,13 @@ enum custom_keycodes{
     PIN1, PIN2, PIN3,
 };
 
+// トラックボール設定用のキーコード
+enum ball_keycodes{
+    BALL_SAFE_RANGE = SAFE_RANGE,
+    CPI_I, CPI_D, L_ANG_I, L_ANG_D, L_INV, R_ANG_I, R_ANG_D, R_INV,
+    L_CHMOD, R_CHMOD, INV_SCRL, MOD_SCRL
+};
+
 // トラックボールの定数、変数
 #define CPI_OPTIONS {950}
 #define CPI_DEFAULT 0
@@ -96,6 +103,60 @@ void eeconfig_init_user(void) {
 
 // KEYHOOK
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
+    if (keycode == CPI_I && record->event.pressed) {
+        ballconfig.cpi_idx = ballconfig.cpi_idx + 1;
+        if(ballconfig.cpi_idx >= CPI_OPTION_SIZE){
+            ballconfig.cpi_idx = CPI_OPTION_SIZE-1;
+        }
+        eeconfig_update_user(ballconfig.raw);
+        pointing_device_set_cpi(cpi_array[ballconfig.cpi_idx]);
+    }
+    if (keycode == CPI_D && record->event.pressed) {
+        if(ballconfig.cpi_idx > 0){
+            ballconfig.cpi_idx = ballconfig.cpi_idx - 1;
+        }
+        eeconfig_update_user(ballconfig.raw);
+        pointing_device_set_cpi(cpi_array[ballconfig.cpi_idx]);
+    }
+    if (keycode == L_ANG_I && record->event.pressed) {
+        ballconfig.angle_idx = (ballconfig.angle_idx + 1) % ANGLE_OPTION_SIZE;
+        eeconfig_update_user(ballconfig.raw);
+    }
+    if (keycode == L_ANG_D && record->event.pressed) {
+        ballconfig.angle_idx = (ANGLE_OPTION_SIZE + ballconfig.angle_idx - 1) % ANGLE_OPTION_SIZE;
+        eeconfig_update_user(ballconfig.raw);
+    }
+    if (keycode == R_ANG_I && record->event.pressed) {
+        ballconfig.angle_idx = (ballconfig.angle_idx + 1) % ANGLE_OPTION_SIZE;
+        eeconfig_update_user(ballconfig.raw);
+    }
+    if (keycode == R_ANG_D && record->event.pressed) {
+        ballconfig.angle_idx = (ANGLE_OPTION_SIZE + ballconfig.angle_idx - 1) % ANGLE_OPTION_SIZE;
+        eeconfig_update_user(ballconfig.raw);
+    }
+    if (keycode == R_INV && record->event.pressed) {
+       ballconfig.inv = !ballconfig.inv;
+        eeconfig_update_user(ballconfig.raw);
+    }
+    if (keycode == L_INV && record->event.pressed) {
+       ballconfig.inv = !ballconfig.inv;
+        eeconfig_update_user(ballconfig.raw);
+    }
+    if (keycode == L_CHMOD && record->event.pressed) {
+       ballconfig.scmode = !ballconfig.scmode;
+        eeconfig_update_user(ballconfig.raw);
+    }
+    if (keycode == R_CHMOD && record->event.pressed) {
+       ballconfig.scmode = !ballconfig.scmode;
+        eeconfig_update_user(ballconfig.raw);
+    }
+    if (keycode == INV_SCRL && record->event.pressed) {
+       ballconfig.inv_sc = !ballconfig.inv_sc;
+        eeconfig_update_user(ballconfig.raw);
+    }
+    if (keycode == MOD_SCRL) {
+        scrolling = record->event.pressed;
+    }
     if (keycode == PIN1 && record->event.pressed) {
        SEND_STRING("miserarenaiyo");
 
@@ -118,13 +179,13 @@ void keyboard_post_init_user(void) {
 }
 
 const rgblight_segment_t PROGMEM layer0[] = RGBLIGHT_LAYER_SEGMENTS(
-    { 0, 9, HSV_BLUE}                                 );
+    { 0, 3, HSV_ORANGE}, { 4, 13, HSV_BLUE}, {18, 1, HSV_ORANGE}                                 );
 const rgblight_segment_t PROGMEM layer1[] = RGBLIGHT_LAYER_SEGMENTS(
-    { 0, 1, HSV_SPRINGGREEN}, {1, 1, HSV_BLACK}, {2, 7, HSV_SPRINGGREEN}                      );
+   { 0, 3, HSV_ORANGE}, { 4, 13, HSV_BLUE}, {18, 1, HSV_ORANGE}                       );
 const rgblight_segment_t PROGMEM layer2[] = RGBLIGHT_LAYER_SEGMENTS(
-    { 0, 9, HSV_ORANGE}                         );
+    { 0, 3, HSV_ORANGE}, { 4, 13, HSV_BLUE}, {18, 1, HSV_ORANGE}                         );
 const rgblight_segment_t PROGMEM layer3[] = RGBLIGHT_LAYER_SEGMENTS(
-    { 0, 1, HSV_RED}, { 1, 4, HSV_BLACK}, {5, 2, HSV_RED}, {7, 2, HSV_BLACK}              );
+    { 0, 3, HSV_ORANGE}, { 4, 13, HSV_BLUE}, {18, 1, HSV_ORANGE}              );
 
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
     layer0,
@@ -145,18 +206,21 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    
-    [0] = LAYOUT_ortho_4x4(
-        KC_P7,   KC_P8,   KC_P9,   KC_PSLS,
-        KC_P4,   KC_P5,   KC_P6,   KC_PAST,
-        KC_P1,   KC_P2,   KC_P3,   KC_PMNS,
-        KC_P0,   KC_PDOT, KC_PENT, KC_PPLS
+    [0] = LAYOUT(
+        KC_A,           KC_B, KC_C,   
+        KC_D,   
+        KC_E,           KC_F, KC_G,
+                  KC_H, KC_I, KC_J, 
+                              KC_K, 
+        KC_L,
+        KC_O, KC_P
     )
 }
 
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [0] =  {
-        ENCODER_CCW_CW(XXXXXXX, XXXXXXX),  // 水平
-        ENCODER_CCW_CW(XXXXXXX, XXXXXXX)   // ロープロ
+        ENCODER_CCW_CW(KC_WH_U, KC_WH_D),  // 水平
+        ENCODER_CCW_CW(KC_RIGHT, KC_LEFT)   // ロープロ
     },
     [1] =  {
         ENCODER_CCW_CW(_______, _______),
