@@ -40,8 +40,8 @@
         "saturation_steps": 2,
         "brightness_steps": 2,
         "sleep": true
-        }
-    },
+        },
+
     "ws2812": {
         "pin": "GP9",
         "driver": "vendor"
