@@ -94,31 +94,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_D, KC_E, KC_F, KC_G, KC_H,
         KC_I, KC_J, KC_K, KC_L, 
         KC_O, KC_P
-    )
+    ),
     [1] = LAYOUT(
         KC_A,             KC_B, KC_C,   
         KC_D, KC_E, KC_F, KC_G, KC_H,
         KC_I, KC_J, KC_K, KC_L, 
         KC_O, KC_P
-    )
+    ),
     [2] = LAYOUT(
         KC_A,             KC_B, KC_C,   
         KC_D, KC_E, KC_F, KC_G, KC_H,
         KC_I, KC_J, KC_K, KC_L, 
         KC_O, KC_P
-    )
+    ),
     [3] = LAYOUT(
         KC_A,             KC_B, KC_C,   
         KC_D, KC_E, KC_F, KC_G, KC_H,
         KC_I, KC_J, KC_K, KC_L, 
         KC_O, KC_P
-    )
+    ),
     [4] = LAYOUT(
         KC_A,             KC_B, KC_C,   
         KC_D, KC_E, KC_F, KC_G, KC_H,
         KC_I, KC_J, KC_K, KC_L, 
         KC_O, KC_P
-    )
+    ),
     [5] = LAYOUT(
         KC_A,             KC_B, KC_C,   
         KC_D, KC_E, KC_F, KC_G, KC_H,
@@ -171,5 +171,4 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         oled_set_cursor(0, 5);
         return false;
     }
-    #endif
 }
