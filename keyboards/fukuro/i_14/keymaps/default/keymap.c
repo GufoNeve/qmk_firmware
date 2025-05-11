@@ -2,33 +2,10 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include QMK_KEYBOARD_H
-#include "lib/add_keycodes.h"
-// ショートカット用キーコード
-enum custom_keycodes{
-    PIN_NYURYOKU = SAFE_RANGE,
-    PIN1, PIN2, PIN3,
-};
 
-// KEYHOOK
-bool process_record_user(uint16_t keycode, keyrecord_t* record) {
-    
-    if (keycode == PIN1 && record->event.pressed) {
-       SEND_STRING("miserarenaiyo");
-
-    }
-    if (keycode == PIN2 && record->event.pressed) {
-       SEND_STRING("miserarenaiyo");
-
-    }
-    if (keycode == PIN3 && record->event.pressed) {
-       SEND_STRING("miserarenaiyo");
-
-    }
+bool led_update_user(led_t led_state) {
+    rgblight_set_layer_state(0, led_state.caps_lock);
     return true;
-}
-
-void keyboard_post_init_user(void) {
-    rgblight_layers = my_rgb_layers;
 }
 
 const rgblight_segment_t PROGMEM layer0[] = RGBLIGHT_LAYER_SEGMENTS(
@@ -43,6 +20,10 @@ const rgblight_segment_t PROGMEM layer4[] = RGBLIGHT_LAYER_SEGMENTS(
     { 0, 8, HSV_ORANGE}, {8, 13, HSV_BLUE}              );
 const rgblight_segment_t PROGMEM layer5[] = RGBLIGHT_LAYER_SEGMENTS(
     { 0, 8, HSV_ORANGE}, {8, 13, HSV_BLUE}              );
+const rgblight_segment_t PROGMEM layer6[] = RGBLIGHT_LAYER_SEGMENTS(
+    { 0, 8, HSV_ORANGE}, {8, 13, HSV_BLUE}              );
+const rgblight_segment_t PROGMEM layer7[] = RGBLIGHT_LAYER_SEGMENTS(
+    { 0, 8, HSV_ORANGE}, {8, 13, HSV_BLUE}              );
 
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
     layer0,
@@ -50,17 +31,21 @@ const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
     layer2,
     layer3,
     layer4,
-    layer5,
+    layer5
 );
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     state = update_tri_layer_state(state, 1, 2, 3);
-    rgblight_set_layer_state(0, layer_state_cmp(state, 0));
-    rgblight_set_layer_state(1, layer_state_cmp(state, 1));
-    rgblight_set_layer_state(2, layer_state_cmp(state, 2));
-    rgblight_set_layer_state(3, layer_state_cmp(state, 3));
+    rgblight_set_layer_state(2, layer_state_cmp(state, 0));
+    rgblight_set_layer_state(3, layer_state_cmp(state, 1));
+    rgblight_set_layer_state(4, layer_state_cmp(state, 2));
+    rgblight_set_layer_state(5, layer_state_cmp(state, 3));
+    rgblight_set_layer_state(6, layer_state_cmp(state, 4));
+    rgblight_set_layer_state(7, layer_state_cmp(state, 5));
     return state;
 }
+
+#if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [0] =  {
         ENCODER_CCW_CW(KC_WH_U, KC_WH_D),  // たて
@@ -85,7 +70,9 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [5] =  {
         ENCODER_CCW_CW(_______, _______),
         ENCODER_CCW_CW(_______, _______)
-    },
+    }
+};
+#endif
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    
@@ -125,8 +112,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_I, KC_J, KC_K, KC_L, 
         KC_O, KC_P
     )
-}
+};
 
+#ifdef OLED_ENABLE
+oled_rotation_t oled_init_kb(oled_rotation_t rotation) {
+    return OLED_ROTATION_0;
+}
 
     bool oled_task_kb(void) {
 
@@ -171,4 +162,4 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         oled_set_cursor(0, 5);
         return false;
     }
-}
+#endif

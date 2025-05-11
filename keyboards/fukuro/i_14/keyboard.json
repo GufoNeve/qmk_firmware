@@ -37,24 +37,23 @@
         "hold_on_other_key_press": true
     },
     "rgblight": {
-        "rgblight": {
-            "animations": {
-                "breathing": true,
-                "rainbow_mood": true,
-                "rainbow_swirl": true,
-                "snake": true,
-                "knight": true,
-                "christmas": true,
-                "static_gradient": true,
-                "rgb_test": true,
-                "alternating": true
-            },
         "led_count": 21,
         "max_brightness": 200,
         "hue_steps": 2,
         "saturation_steps": 2,
         "brightness_steps": 2,
-        "sleep": true
+        "sleep": true,
+        "animations": {
+             "breathing": false,
+             "rainbow_mood": false,
+             "rainbow_swirl": false,
+             "snake": false,
+             "knight": false,
+             "christmas": false,
+             "static_gradient": false,
+             "rgb_test": false,
+             "alternating": false
+            }
         },
 
     "ws2812": {
@@ -70,7 +69,7 @@
         "enabled": true,
         "rotary": [
             { "pin_a": "GP3", "pin_b": "GP4", "resolution": 2},
-            { "pin_a": "GP1", "pin_b": "GP2", "resolution": 2}
+            { "pin_a": "GP2", "pin_b": "GP1", "resolution": 2}
         ]
     },
     "matrix_pins": {
@@ -101,5 +100,4 @@
             ]
         }
     }
-}
 }
