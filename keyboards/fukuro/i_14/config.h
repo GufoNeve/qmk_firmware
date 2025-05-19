@@ -2,16 +2,14 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #pragma once
-/**/
-#define SPI_SCK_PIN GP10
-#define SPI_MOSI_PIN GP11
-#define SPI_MISO_PIN GP12
-#define PMW33XX_CS_PIN  GP0
+#define SPI_SCK_PIN  GP10 
+#define SPI_MOSI_PIN  GP11 
+#define SPI_MISO_PIN  GP12 
+#define PMW33XX_CS_PIN  GP0 
 #define PMW33XX_CPI 900
-#define PMW33XX_CLOCK_SPEED 2000000
+#define PMW33XX_CLOCK_SPEED 1000000
 #define MOUSE_EXTENDED_REPORT
 #define POINTING_DEVICE_INVERT_X
-
 
 #define RGBLIGHT_LAYERS_RETAIN_VAL
 #define RGBLIGHT_LAYERS
@@ -22,5 +20,8 @@
 
 #define DYNAMIC_KEYMAP_LAYER_COUNT 6
 
-#define OLED_DC_PIN GP7
-#define OLED_CS_PIN GP8
+#define OLED_SDA_PIN GP8  // 追加：I2CのSDAピン
+#define OLED_SCL_PIN GP17
+#define OLED_I2C_ADDRESS 0x3C 
+
+#define DEBUG_LEVEL 3
