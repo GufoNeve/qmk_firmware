@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include QMK_KEYBOARD_H
-
+#include <math.h>
 
 
 bool led_update_user(led_t led_state) {
@@ -11,28 +11,28 @@ bool led_update_user(led_t led_state) {
 }
 
 const rgblight_segment_t PROGMEM layer0[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 8, HSV_ORANGE}, {8, 13, HSV_BLUE} 
+    {0, 7, HSV_ORANGE}, {8, 14, HSV_BLUE} 
  );
 const rgblight_segment_t PROGMEM layer1[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 8, HSV_ORANGE}, {8, 13, HSV_BLUE}                       
+    {0, 7, HSV_ORANGE}, {8, 14, HSV_YELLOW}                       
 );
 const rgblight_segment_t PROGMEM layer2[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 8, HSV_ORANGE}, {8, 13, HSV_BLUE}                         
+    {0, 7, HSV_ORANGE}, {8, 14, HSV_GREEN}                         
 );
 const rgblight_segment_t PROGMEM layer3[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 8, HSV_ORANGE}, {8, 13, HSV_BLUE}              
+    {0, 7, HSV_ORANGE}, {8, 14, HSV_CYAN}              
 );
 const rgblight_segment_t PROGMEM layer4[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 8, HSV_ORANGE}, {8, 13, HSV_BLUE}             
+    {0, 7, HSV_ORANGE}, {8, 14, HSV_BLUE}             
  );
 const rgblight_segment_t PROGMEM layer5[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 8, HSV_ORANGE}, {8, 13, HSV_BLUE}             
+    {0, 7, HSV_ORANGE}, {8, 14, HSV_BLUE}             
  );
 const rgblight_segment_t PROGMEM layer6[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 8, HSV_ORANGE}, {8, 13, HSV_BLUE}              
+    {0, 7, HSV_ORANGE}, {8, 14, HSV_BLUE}              
 );
 const rgblight_segment_t PROGMEM layer7[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 8, HSV_ORANGE}, {8, 13, HSV_BLUE}              
+    {0, 7, HSV_ORANGE}, {8, 14, HSV_BLUE}              
 );
 
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
@@ -46,19 +46,20 @@ const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
 
 // 初期化時にRGBレイヤーを設定
 void keyboard_post_init_user(void) {
-    dprintf("Keyboard initialized\n");
+    rgblight_enable();  // RGBライトを有効化
+    rgblight_mode(RGBLIGHT_MODE_STATIC_LIGHT);  // モードを固定
     rgblight_layers = my_rgb_layers;
 }
 
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     state = update_tri_layer_state(state, 1, 2, 3);
-    rgblight_set_layer_state(0, layer_state_cmp(state, 1));
-    rgblight_set_layer_state(1, layer_state_cmp(state, 2));
-    rgblight_set_layer_state(2, layer_state_cmp(state, 3));
-    rgblight_set_layer_state(3, layer_state_cmp(state, 4));
-    rgblight_set_layer_state(4, layer_state_cmp(state, 5));
-    rgblight_set_layer_state(5, layer_state_cmp(state, 6));
+    rgblight_set_layer_state(0, layer_state_cmp(state, 0));
+    rgblight_set_layer_state(1, layer_state_cmp(state, 1));
+    rgblight_set_layer_state(2, layer_state_cmp(state, 2));
+    rgblight_set_layer_state(3, layer_state_cmp(state, 3));
+    rgblight_set_layer_state(4, layer_state_cmp(state, 4));
+    rgblight_set_layer_state(5, layer_state_cmp(state, 5));
     return state;
 }
 
@@ -135,13 +136,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     )
 };
 
+
 #ifdef OLED_ENABLE
 oled_rotation_t oled_init_kb(oled_rotation_t rotation) {
-    return OLED_ROTATION_0;  // 画面の向きを設定（0, 90, 180, 270度から選択）
+    dprintf("OLED initializing\n");
+    return OLED_ROTATION_0;
+  // 画面の向きを設定（0, 90, 180, 270度から選択）
 }
 
 bool oled_task_kb(void) {
-    if (!oled_task_user()) { return false; }
+    if (!oled_task_user()) { return true; }
 
     // 128x32ピクセルの画像データ
         static const char PROGMEM my_logo[] = {
