@@ -46,7 +46,6 @@
     "driver": "vendor"
 },
 
-
     "dynamic_keymap": {
         "layer_count": 6
     },
