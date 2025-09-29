@@ -30,16 +30,16 @@
             }
         },
         "ws2812": {
-    "pin": "D3",
-    "driver": "vendor"
+    "pin": "D3"
+    
 },
 
     "dynamic_keymap": {
         "layer_count": 10
     },
     "matrix_pins": {
-        "cols": ["D15"],
-        "rows": ["D14"]
+        "cols": ["F4"],
+        "rows": ["F5"]
         
     },
     "url": "",

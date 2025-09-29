@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include QMK_KEYBOARD_H
-#include <math.h>
 
 #ifdef RGBLIGHT_LAYERS
 const rgblight_segment_t PROGMEM layer0[] = RGBLIGHT_LAYER_SEGMENTS(
@@ -73,15 +72,11 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 }
 #endif // RGBLIGHT_LAYERS
 
-void matrix_init_user(void) {
-    dprintf("Matrix initialized\n");
-}
-
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    
     [0] = LAYOUT_ortho_1x1(
-        KC_A
+        TG(1)
     ),
     [1] = LAYOUT_ortho_1x1(
         TG(2)
@@ -110,5 +105,5 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [9] = LAYOUT_ortho_1x1(
         TG(0)
     )
-}
+};
 
