@@ -10,6 +10,7 @@ void pointing_device_init_kb(void) {
 #endif
 }
 
+
 const rgblight_segment_t PROGMEM layer0[] = RGBLIGHT_LAYER_SEGMENTS(
     {0, 7, HSV_ORANGE}, {7, 14, HSV_BLUE} 
  );
@@ -56,6 +57,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     rgblight_set_layer_state(5, layer_state_cmp(state, 5));
     return state;
 }
+
 
 void matrix_init_user(void) {
     dprintf("Matrix initialized\n");
