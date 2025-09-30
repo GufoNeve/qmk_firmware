@@ -57,7 +57,6 @@ void keyboard_post_init_user(void) {
 
 
 layer_state_t layer_state_set_user(layer_state_t state) {
-    state = update_tri_layer_state(state, 1, 2, 3);
     rgblight_set_layer_state(0, layer_state_cmp(state, 0));
     rgblight_set_layer_state(1, layer_state_cmp(state, 1));
     rgblight_set_layer_state(2, layer_state_cmp(state, 2));
@@ -72,38 +71,69 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 }
 #endif // RGBLIGHT_LAYERS
 
+enum keycodes {
+  KC_CYCLE_LAYERS = QK_USER,
+};
+
+#define LAYER_CYCLE_START 0
+#define LAYER_CYCLE_END   9
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+    case KC_CYCLE_LAYERS:
+      if (!record->event.pressed) {
+        return false;
+      }
+
+      uint8_t current_layer = get_highest_layer(layer_state);
+
+      if (current_layer > LAYER_CYCLE_END || current_layer < LAYER_CYCLE_START) {
+        return false;
+      }
+
+      uint8_t next_layer = current_layer + 1;
+      if (next_layer > LAYER_CYCLE_END) {
+          next_layer = LAYER_CYCLE_START;
+      }
+      layer_move(next_layer);
+      return false;
+
+    default:
+      return true;
+      }
+    }
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    
     [0] = LAYOUT_ortho_1x1(
-        TG(1)
+        KC_CYCLE_LAYERS
     ),
     [1] = LAYOUT_ortho_1x1(
-        TG(2)
+        KC_CYCLE_LAYERS
     ),
     [2] = LAYOUT_ortho_1x1(
-        TG(3)
+        KC_CYCLE_LAYERS
     ),
     [3] = LAYOUT_ortho_1x1(
-        TG(4)
+        KC_CYCLE_LAYERS
     ),
     [4] = LAYOUT_ortho_1x1(
-        TG(5)
+        KC_CYCLE_LAYERS
     ),
     [5] = LAYOUT_ortho_1x1(
-        TG(6)
+        KC_CYCLE_LAYERS
     ),
     [6] = LAYOUT_ortho_1x1(
-        TG(7)
+        KC_CYCLE_LAYERS
     ),
     [7] = LAYOUT_ortho_1x1(
-        TG(8)
+        KC_CYCLE_LAYERS
     ),
     [8] = LAYOUT_ortho_1x1(
-        TG(9)
+        KC_CYCLE_LAYERS
     ),
     [9] = LAYOUT_ortho_1x1(
-        TG(0)
+        KC_CYCLE_LAYERS
     )
 };
 
