@@ -24,7 +24,7 @@
         "hold_on_other_key_press": true
     },
     "rgblight": {
-        "led_count": 21,
+        "led_count": 31,
         "hue_steps": 2,
         "saturation_steps": 2,
         "brightness_steps": 2,
@@ -47,7 +47,7 @@
 },
 
     "dynamic_keymap": {
-        "layer_count": 6
+        "layer_count": 10
     },
 
     "encoder": {

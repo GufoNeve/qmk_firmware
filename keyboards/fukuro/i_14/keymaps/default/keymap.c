@@ -12,23 +12,45 @@ void pointing_device_init_kb(void) {
 
 
 const rgblight_segment_t PROGMEM layer0[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_ORANGE}, {7, 14, HSV_BLUE} 
+    {0, 7, HSV_ORANGE}, {7, 14, HSV_BLUE},  //本体
+     {21, 1, HSV_BLACK}, {22, 1, HSV_ORANGE}, {23, 8, HSV_BLACK} //ディスプレイ
  );
 const rgblight_segment_t PROGMEM layer1[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_ORANGE}, {87, 14, HSV_YELLOW}                       
+    {0, 7, HSV_ORANGE}, {87, 14, HSV_YELLOW},  //本体
+    {21, 1, HSV_BLUE}, {22, 9, HSV_BLACK}//ディスプレイ                     
 );
 const rgblight_segment_t PROGMEM layer2[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_ORANGE}, {7, 14, HSV_GREEN}                         
+    {0, 7, HSV_ORANGE}, {7, 14, HSV_GREEN},   //本体
+    {21, 7, HSV_BLACK}, {28, 1, HSV_GREEN}, {29, 2, HSV_BLACK}//ディスプレイ                     
 );
 const rgblight_segment_t PROGMEM layer3[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_ORANGE}, {7, 14, HSV_CYAN}              
+    {0, 7, HSV_ORANGE}, {7, 14, HSV_CYAN},  //本体
+    {21, 4, HSV_BLACK}, {25, 1, HSV_GOLD}, {26, 5, HSV_BLACK}//ディスプレイ            
 );
 const rgblight_segment_t PROGMEM layer4[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_ORANGE}, {7, 14, HSV_BLUE}             
+    {0, 7, HSV_ORANGE}, {7, 14, HSV_BLUE}, //本体
+    {21, 6, HSV_BLACK}, {27, 1, HSV_CYAN}, {28, 3, HSV_BLACK}//ディスプレイ            
  );
 const rgblight_segment_t PROGMEM layer5[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_ORANGE}, {7, 14, HSV_BLUE}             
+    {0, 7, HSV_ORANGE}, {7, 14, HSV_BLUE},  //本体
+    {21, 8, HSV_BLACK}, {29, 1, HSV_RED}, {30, 1, HSV_BLACK}//ディスプレイ           
  );
+ const rgblight_segment_t PROGMEM layer6[] = RGBLIGHT_LAYER_SEGMENTS(
+    {0, 7, HSV_ORANGE}, {7, 14, HSV_BLUE},  //本体
+    {21, 9, HSV_BLACK}, {30, 1, HSV_MAGENTA}//ディスプレイ
+);
+const rgblight_segment_t PROGMEM layer7[] = RGBLIGHT_LAYER_SEGMENTS(
+     {0, 7, HSV_ORANGE}, {7, 14, HSV_BLUE},  //本体
+     {21, 2, HSV_BLACK}, {23, 1, HSV_BLUE}, {24, 7, HSV_BLACK}//ディスプレイ
+);
+const rgblight_segment_t PROGMEM layer8[] = RGBLIGHT_LAYER_SEGMENTS(
+     {0, 7, HSV_ORANGE}, {7, 14, HSV_BLUE},  //本体
+     {21, 5, HSV_BLACK}, {26, 1, HSV_ORANGE}, {27, 4, HSV_BLACK}//ディスプレイ
+);
+const rgblight_segment_t PROGMEM layer9[] = RGBLIGHT_LAYER_SEGMENTS(
+     {0, 7, HSV_ORANGE}, {7, 14, HSV_BLUE},  //本体
+     {21, 3, HSV_BLACK}, {24, 1, HSV_CYAN}, {25, 6, HSV_BLACK}//ディスプレイ
+);
 
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
     layer0,
@@ -36,7 +58,11 @@ const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
     layer2,
     layer3,
     layer4,
-    layer5
+    layer5,
+    layer6,
+    layer7,
+    layer8,
+    layer9
 );
 
 // 初期化時にRGBレイヤーを設定
@@ -54,6 +80,10 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     rgblight_set_layer_state(3, layer_state_cmp(state, 3));
     rgblight_set_layer_state(4, layer_state_cmp(state, 4));
     rgblight_set_layer_state(5, layer_state_cmp(state, 5));
+    rgblight_set_layer_state(6, layer_state_cmp(state, 6));
+    rgblight_set_layer_state(7, layer_state_cmp(state, 7));
+    rgblight_set_layer_state(8, layer_state_cmp(state, 8));
+    rgblight_set_layer_state(9, layer_state_cmp(state, 9));
     return state;
 }
 
@@ -87,6 +117,22 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [5] =  {
         ENCODER_CCW_CW(_______, _______),
         ENCODER_CCW_CW(_______, _______)
+    },
+    [6] =  {
+        ENCODER_CCW_CW(_______, _______),
+        ENCODER_CCW_CW(_______, _______)
+    },
+    [7] =  {
+        ENCODER_CCW_CW(_______, _______),
+        ENCODER_CCW_CW(_______, _______)
+    },
+    [8] =  {
+        ENCODER_CCW_CW(_______, _______),
+        ENCODER_CCW_CW(_______, _______)
+    },
+    [9] =  {
+        ENCODER_CCW_CW(_______, _______),
+        ENCODER_CCW_CW(_______, _______)
     }
 };
 #endif
@@ -94,10 +140,10 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    
     [0] = LAYOUT(
-        KC_A,             KC_B, KC_C,   
-        MO(1), KC_E, KC_F, KC_G, KC_H,
-        KC_I, KC_J, KC_K, KC_L, 
-        KC_O, KC_P
+        MO(1),             KC_B, KC_C,   
+        MO(2), MO(7), MO(8), KC_G, KC_H,
+        MO(3), MO(6), MO(9), KC_L, 
+        MO(4), MO(5)
     ),
     [1] = LAYOUT(
         KC_A,             KC_B, KC_C,   
@@ -128,13 +174,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_D, KC_E, KC_F, KC_G, KC_H,
         KC_I, KC_J, KC_K, KC_L, 
         KC_O, KC_P
+    ),
+    [6] = LAYOUT(
+        KC_A,             KC_B, KC_C,   
+        KC_D, KC_E, KC_F, KC_G, KC_H,
+        KC_I, KC_J, KC_K, KC_L, 
+        KC_O, KC_P
+    ),
+    [7] = LAYOUT(
+        KC_A,             KC_B, KC_C,   
+        KC_D, KC_E, KC_F, KC_G, KC_H,
+        KC_I, KC_J, KC_K, KC_L, 
+        KC_O, KC_P
+    ),
+    [8] = LAYOUT(
+        KC_A,             KC_B, KC_C,   
+        KC_D, KC_E, KC_F, KC_G, KC_H,
+        KC_I, KC_J, KC_K, KC_L, 
+        KC_O, KC_P
+    ),
+    [9] = LAYOUT(
+        KC_A,             KC_B, KC_C,   
+        KC_D, KC_E, KC_F, KC_G, KC_H,
+        KC_I, KC_J, KC_K, KC_L, 
+        KC_O, KC_P
     )
 };
 
-
-#ifdef OLED_ENABLE
-bool oled_task_user(void) {
-    oled_write_P(PSTR("Hello, OLED!"), false);
-    return false;
-}
-#endif
