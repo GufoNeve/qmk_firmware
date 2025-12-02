@@ -92,6 +92,32 @@ void matrix_init_user(void) {
     dprintf("Matrix initialized\n");
 }
 
+// カスタムキーコード
+enum custom_keycodes{
+    PIN = SAFE_RANGE,
+    PIN1, PIN2, PIN3, PIN4, PIN5
+};
+
+bool process_record_user(uint16_t keycode, keyrecord_t* record) {
+    if (keycode == PIN1 && record->event.pressed) {
+       SEND_STRING("1716");
+    }
+    if (keycode == PIN2 && record->event.pressed) {
+       SEND_STRING("9061");
+    }
+    if (keycode == PIN3 && record->event.pressed) {
+       SEND_STRING("1ang1ay14chang");
+    }
+    if (keycode == PIN4 && record->event.pressed) {
+       SEND_STRING("ka0rieila");
+    }
+    if (keycode == PIN5 && record->event.pressed) {
+       SEND_STRING("Zu1h0");
+    }
+    return true;
+}
+
+
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [0] =  {
@@ -102,34 +128,26 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     },
     [2] =  {
         ENCODER_CCW_CW(_______, _______)
-        ENCODER_CCW_CW(_______, _______)
     },
     [3] =  {
-        ENCODER_CCW_CW(_______, _______)
         ENCODER_CCW_CW(_______, _______)
     },
     [4] =  {
         ENCODER_CCW_CW(_______, _______)
-        ENCODER_CCW_CW(_______, _______)
     },
     [5] =  {
-        ENCODER_CCW_CW(_______, _______)
         ENCODER_CCW_CW(_______, _______)
     },
     [6] =  {
         ENCODER_CCW_CW(_______, _______)
-        ENCODER_CCW_CW(_______, _______)
     },
     [7] =  {
-        ENCODER_CCW_CW(_______, _______)
         ENCODER_CCW_CW(_______, _______)
     },
     [8] =  {
         ENCODER_CCW_CW(_______, _______)
-        ENCODER_CCW_CW(_______, _______)
     },
     [9] =  {
-        ENCODER_CCW_CW(_______, _______)
         ENCODER_CCW_CW(_______, _______)
     }
 };
@@ -138,16 +156,16 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    
     [0] = LAYOUT(
-        MO(1),             KC_B, KC_C,   
-        MO(2), MO(7), MO(8), KC_G, KC_H,
-        MO(3), MO(6), MO(9), KC_L, 
-        MO(4), MO(5)
+        KC_F5,           KC_MS_BTN2, KC_BACKSPACE,   
+        KC_PSCR, LALT(KC_LEFT), LALT(KC_RIGHT), MO(1), KC_ENT,
+        KC_MS_BTN3, KC_MS_BTN1, TG(5), KC_TAB, 
+        MO(2), KC_SPC
     ),
     [1] = LAYOUT(
         KC_A,             KC_B, KC_C,   
         KC_D, KC_E, KC_F, KC_G, KC_H,
         KC_I, KC_J, KC_K, KC_L, 
-        KC_O, KC_P
+        MO(4), KC_P
     ),
     [2] = LAYOUT(
         KC_A,             KC_B, KC_C,   
@@ -162,10 +180,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_O, KC_P
     ),
     [4] = LAYOUT(
-        KC_A,             KC_B, KC_C,   
-        KC_D, KC_E, KC_F, KC_G, KC_H,
-        KC_I, KC_J, KC_K, KC_L, 
-        KC_O, KC_P
+        PIN1,             XXXXXXX, XXXXXXX,   
+        PIN2, PIN3, PIN4, XXXXXXX, XXXXXXX,
+        XXXXXXX, XXXXXXX, PIN5, XXXXXXX, 
+        MO(4), XXXXXXX
     ),
     [5] = LAYOUT(
         KC_A,             KC_B, KC_C,   
