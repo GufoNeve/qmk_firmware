@@ -53,8 +53,7 @@
     "encoder": {
         "enabled": true,
         "rotary": [
-            { "pin_a": "GP4", "pin_b": "GP3", "resolution": 2},
-            { "pin_a": "GP2", "pin_b": "GP1", "resolution": 2}
+            { "pin_a": "GP4", "pin_b": "GP3", "resolution": 2}
         ]
     },
    "matrix_pins": {
