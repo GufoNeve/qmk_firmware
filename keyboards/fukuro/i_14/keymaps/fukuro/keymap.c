@@ -16,11 +16,11 @@ const rgblight_segment_t PROGMEM layer0[] = RGBLIGHT_LAYER_SEGMENTS(
      {21, 1, HSV_BLACK}, {22, 1, HSV_ORANGE}, {23, 8, HSV_BLACK} //ディスプレイ
  );
 const rgblight_segment_t PROGMEM layer1[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_ORANGE}, {87, 14, HSV_YELLOW},  //本体
+    {0, 7, HSV_ORANGE}, {7, 14, HSV_MAGENTA},  //本体
     {21, 1, HSV_ORANGE}, {22, 9, HSV_BLACK}//ディスプレイ                     
 );
 const rgblight_segment_t PROGMEM layer2[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_ORANGE}, {7, 14, HSV_GREEN},   //本体
+    {0, 7, HSV_ORANGE}, {7, 14, HSV_GOLD},   //本体
     {21, 7, HSV_BLACK}, {28, 1, HSV_ORANGE}, {29, 2, HSV_BLACK}//ディスプレイ                     
 );
 const rgblight_segment_t PROGMEM layer3[] = RGBLIGHT_LAYER_SEGMENTS(
@@ -156,20 +156,20 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    
     [0] = LAYOUT(
-        KC_F5,           KC_MS_BTN2, KC_BACKSPACE,   
-        KC_PSCR, LALT(KC_LEFT), LALT(KC_RIGHT), MO(1), KC_ENT,
-        KC_MS_BTN3, KC_MS_BTN1, TG(5), KC_TAB, 
+        LALT(KC_LEFT),           MS_BTN2, KC_BACKSPACE,   
+        LALT(KC_RIGHT), KC_F5, KC_PSCR, MO(1), KC_ENT,
+        MS_BTN3, MS_BTN1, TG(5), LWIN(KC_TAB), 
         MO(2), KC_SPC
     ),
     [1] = LAYOUT(
-        KC_A,             KC_B, KC_C,   
-        KC_D, KC_E, KC_F, KC_G, KC_H,
-        KC_I, KC_J, KC_K, KC_L, 
-        MO(4), KC_P
+        C(KC_PGUP),             KC_B, KC_DEL,   
+        C(KC_PGDN), A(KC_W), A(KC_N), MO(1), KC_ENT,
+        C(KC_V), C(KC_C), KC_K, KC_L, 
+        MO(4), C(KC_X)
     ),
-    [2] = LAYOUT(
-        KC_A,             KC_B, KC_C,   
-        KC_D, KC_E, KC_F, KC_G, KC_H,
+    [2] = LAYOUT(  
+        LCS(KC_N),             C(KC_S), C(KC_W),   
+        KC_D, KC_E, KC_F, LCS(KC_S), KC_H,
         KC_I, KC_J, KC_K, KC_L, 
         KC_O, KC_P
     ),
@@ -188,7 +188,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [5] = LAYOUT(
         KC_A,             KC_B, KC_C,   
         KC_D, KC_E, KC_F, KC_G, KC_H,
-        KC_I, KC_J, KC_K, KC_L, 
+        KC_I, KC_J, TG(5), KC_L, 
         KC_O, KC_P
     ),
     [6] = LAYOUT(
