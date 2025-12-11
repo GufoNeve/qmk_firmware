@@ -156,22 +156,22 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    
     [0] = LAYOUT(
-        LALT(KC_LEFT),           MS_BTN2, KC_BACKSPACE,   
-        LALT(KC_RIGHT), KC_F5, KC_PSCR, MO(1), KC_ENT,
-        MS_BTN3, MS_BTN1, TG(5), LWIN(KC_TAB), 
+        LALT(KC_RIGHT),           MS_BTN2, KC_BACKSPACE,   
+        LALT(KC_LEFT), C(KC_PGUP), C(KC_PGDN), MO(1), KC_ENT,
+        MS_BTN1, MS_BTN3, TG(5), LWIN(KC_TAB), 
         MO(2), KC_SPC
     ),
     [1] = LAYOUT(
-        C(KC_PGUP),             KC_B, KC_DEL,   
-        C(KC_PGDN), A(KC_W), A(KC_N), MO(1), KC_ENT,
-        C(KC_V), C(KC_C), KC_K, KC_L, 
+        KC_F5,             C(KC_Z), KC_DEL,   
+        KC_PSCR, A(KC_W), A(KC_N), MO(1), KC_ENT,
+        C(KC_C), C(KC_V), KC_K, KC_L, 
         MO(4), C(KC_X)
     ),
     [2] = LAYOUT(  
         LCS(KC_N),             C(KC_S), C(KC_W),   
-        KC_D, KC_E, KC_F, LCS(KC_S), KC_H,
+        LCS(KC_ESC), KC_E, KC_F, LCS(KC_S), KC_ENT,
         KC_I, KC_J, KC_K, KC_L, 
-        KC_O, KC_P
+        MO(2), XXXXXXX
     ),
     [3] = LAYOUT(
         KC_A,             KC_B, KC_C,   
