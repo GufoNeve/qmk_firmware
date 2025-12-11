@@ -28,11 +28,11 @@ const rgblight_segment_t PROGMEM layer3[] = RGBLIGHT_LAYER_SEGMENTS(
     {21, 4, HSV_BLACK}, {25, 1, HSV_ORANGE}, {26, 5, HSV_BLACK}//ディスプレイ            
 );
 const rgblight_segment_t PROGMEM layer4[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_ORANGE}, {7, 14, HSV_BLUE}, //本体
+    {0, 7, HSV_ORANGE}, {7, 4, HSV_RED}, {11, 6, HSV_BLAck}, {16, 1, HSV_RED}, {17, 4, HSV_BLACK},//本体
     {21, 6, HSV_BLACK}, {27, 1, HSV_ORANGE}, {28, 3, HSV_BLACK}//ディスプレイ            
  );
 const rgblight_segment_t PROGMEM layer5[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_ORANGE}, {7, 14, HSV_BLUE},  //本体
+    {0, 7, HSV_ORANGE}, {7, 14, HSV_SPRINGGREEN},  //本体
     {21, 8, HSV_BLACK}, {29, 1, HSV_ORANGE}, {30, 1, HSV_BLACK}//ディスプレイ           
  );
  const rgblight_segment_t PROGMEM layer6[] = RGBLIGHT_LAYER_SEGMENTS(
@@ -155,61 +155,61 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    
-    [0] = LAYOUT(
+    [0] = LAYOUT( //マウスとしての機能
         LALT(KC_RIGHT),           MS_BTN2, KC_BACKSPACE,   
-        LALT(KC_LEFT), C(KC_PGUP), C(KC_PGDN), MO(1), KC_ENT,
-        MS_BTN1, MS_BTN3, TG(5), LWIN(KC_TAB), 
-        MO(2), KC_SPC
+        LALT(KC_LEFT), KC_LEFT, KC_RIGHT, LT(1, KC_UP), KC_ENT,
+        LT(3, KC_SPC), MS_BTN1, TG(5), LWIN(KC_TAB), 
+        MO(2), MS_BTN3
     ),
-    [1] = LAYOUT(
-        KC_F5,             C(KC_Z), KC_DEL,   
-        KC_PSCR, A(KC_W), A(KC_N), MO(1), KC_ENT,
+    [1] = LAYOUT( //コピペなどの頻出ショートカット
+        C(KC_S),             C(KC_S), KC_DEL,   
+        KC_PSCR, A(KC_W), A(KC_N), LCS(KC_S), KC_ENT,
         C(KC_C), C(KC_V), KC_K, KC_L, 
         MO(4), C(KC_X)
     ),
-    [2] = LAYOUT(  
+    [2] = LAYOUT( //画面操作系ショートカット
         LCS(KC_N),             C(KC_S), C(KC_W),   
-        LCS(KC_ESC), KC_E, KC_F, LCS(KC_S), KC_ENT,
+        LCS(KC_ESC), C(KC_PGUP), C(KC_PGDN), LWIN(KC_TAB), KC_ENT,
         KC_I, KC_J, KC_K, KC_L, 
         MO(2), XXXXXXX
     ),
-    [3] = LAYOUT(
+    [3] = LAYOUT( //電源系ショートカット
         KC_A,             KC_B, KC_C,   
         KC_D, KC_E, KC_F, KC_G, KC_H,
         KC_I, KC_J, KC_K, KC_L, 
         KC_O, KC_P
     ),
-    [4] = LAYOUT(
+    [4] = LAYOUT( //PIN
         PIN1,             XXXXXXX, XXXXXXX,   
         PIN2, PIN3, PIN4, XXXXXXX, XXXXXXX,
         XXXXXXX, XXXXXXX, PIN5, XXXXXXX, 
         MO(4), XXXXXXX
     ),
-    [5] = LAYOUT(
+    [5] = LAYOUT( //イラレ用1
         KC_A,             KC_B, KC_C,   
         KC_D, KC_E, KC_F, KC_G, KC_H,
         KC_I, KC_J, TG(5), KC_L, 
         KC_O, KC_P
     ),
-    [6] = LAYOUT(
+    [6] = LAYOUT( //イラレ用2
         KC_A,             KC_B, KC_C,   
         KC_D, KC_E, KC_F, KC_G, KC_H,
         KC_I, KC_J, KC_K, KC_L, 
         KC_O, KC_P
     ),
-    [7] = LAYOUT(
+    [7] = LAYOUT( //
         KC_A,             KC_B, KC_C,   
         KC_D, KC_E, KC_F, KC_G, KC_H,
         KC_I, KC_J, KC_K, KC_L, 
         KC_O, KC_P
     ),
-    [8] = LAYOUT(
+    [8] = LAYOUT( //
         KC_A,             KC_B, KC_C,   
         KC_D, KC_E, KC_F, KC_G, KC_H,
         KC_I, KC_J, KC_K, KC_L, 
         KC_O, KC_P
     ),
-    [9] = LAYOUT(
+    [9] = LAYOUT( //
         KC_A,             KC_B, KC_C,   
         KC_D, KC_E, KC_F, KC_G, KC_H,
         KC_I, KC_J, KC_K, KC_L, 
