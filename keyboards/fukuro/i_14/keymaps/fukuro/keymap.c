@@ -158,8 +158,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT( //マウスとしての機能
         LALT(KC_RIGHT),           MS_BTN2, KC_BACKSPACE,   
         LALT(KC_LEFT), KC_LEFT, KC_RIGHT, LT(1, KC_UP), KC_ENT,
-        LT(3, KC_SPC), MS_BTN1, TG(5), LWIN(KC_TAB), 
-        MO(2), MS_BTN3
+        LT(2, MS_BTN1), MS_BTN1, TG(5), LWIN(KC_TAB), 
+        LT(3, KC_SPACE), MS_BTN3
     ),
     [1] = LAYOUT( //コピペなどの頻出ショートカット
         C(KC_S),             C(KC_S), KC_DEL,   
