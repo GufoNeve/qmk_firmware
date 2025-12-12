@@ -174,10 +174,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX, XXXXXXX
     ),
     [3] = LAYOUT( //電源系ショートカット
-        LCS(KC_ESC),             KC_B, KC_C,   
-        KC_D, KC_E, KC_F, KC_G, KC_H,
-        KC_I, KC_J, KC_K, KC_L, 
-        KC_O, KC_P
+        LCS(KC_ESC),             XXXXXXX, XXXXXXX,   
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
+        MO(3), XXXXXXX
     ),
     [4] = LAYOUT( //PIN
         PIN1,             XXXXXXX, XXXXXXX,   
