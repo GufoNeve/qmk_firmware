@@ -24,7 +24,8 @@ const rgblight_segment_t PROGMEM layer2[] = RGBLIGHT_LAYER_SEGMENTS(
     {21, 7, HSV_BLACK}, {28, 1, HSV_ORANGE}, {29, 2, HSV_BLACK}//ディスプレイ                     
 );
 const rgblight_segment_t PROGMEM layer3[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_ORANGE}, {7, 14, HSV_CYAN},  //本体
+    {0, 7, HSV_ORANGE}, {7, 3, HSV_GREEN}, {10, 1, HSV_BLACK}, {11, 1, HSV_WHITE}, {12, 1, HSV_BLACK}, 
+    {13, 2, HSV_RED}, {15, 1, HSV_WHITE}, {16, 2, HSV_GREEN}, {18, 3, HSV_BLACK}, //本体
     {21, 4, HSV_BLACK}, {25, 1, HSV_ORANGE}, {26, 5, HSV_BLACK}//ディスプレイ            
 );
 const rgblight_segment_t PROGMEM layer4[] = RGBLIGHT_LAYER_SEGMENTS(
@@ -158,8 +159,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT( //マウスとしての機能
         LALT(KC_RIGHT),           MS_BTN2, KC_BACKSPACE,   
         LALT(KC_LEFT), KC_LEFT, KC_RIGHT, LT(1, KC_UP), KC_ENT,
-        LT(2, MS_BTN1), MS_BTN1, TG(5), KC_DOWN, 
-        LT(3, KC_SPC), MS_BTN3
+        LT(3, MS_BTN1), MS_BTN1, TG(5), KC_DOWN, 
+        LT(2, KC_SPC), MS_BTN3
     ),
     [1] = LAYOUT( //コピペなどの頻出ショートカット
         C(KC_A),             XXXXXXX, KC_DEL,   
@@ -170,14 +171,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [2] = LAYOUT( //画面操作系ショートカット
         KC_F5,             C(KC_S), C(KC_W),   
         LWIN(KC_TAB), LCS(KC_N), C(KC_PGUP), C(KC_PGDN), LCS(KC_S),
-        MO(2), XXXXXXX, A(KC_W), A(KC_N), 
-        XXXXXXX, XXXXXXX
+        XXXXXXX, XXXXXXX, A(KC_W), A(KC_N), 
+        MO(2), XXXXXXX
     ),
     [3] = LAYOUT( //電源系ショートカット
-        LCS(KC_ESC),             XXXXXXX, XXXXXXX,   
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
-        MO(3), XXXXXXX
+        KC_LNG5,             XXXXXXX, KC_PWR,   
+        KC_ESC, LCS(KC_ESC), XXXXXXX, KC_SLEP, KC_WAKE,
+        MO(3), XXXXXXX, KC_LWIN, LWIN(KC_L), 
+        XXXXXXX, XXXXXXX
     ),
     [4] = LAYOUT( //PIN
         PIN1,             XXXXXXX, XXXXXXX,   
