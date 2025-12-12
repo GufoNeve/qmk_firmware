@@ -158,20 +158,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT( //マウスとしての機能
         LALT(KC_RIGHT),           MS_BTN2, KC_BACKSPACE,   
         LALT(KC_LEFT), KC_LEFT, KC_RIGHT, LT(1, KC_UP), KC_ENT,
-        LT(3, KC_SPC), MS_BTN1, TG(5), KC_DOWN, 
-        MO(2), MS_BTN3
+        LT(2, MS_BTN1), MS_BTN1, TG(5), KC_DOWN, 
+        LT(3, KC_SPC), MS_BTN3
     ),
     [1] = LAYOUT( //コピペなどの頻出ショートカット
-        KC_F5,             XXXXXXX, KC_DEL,   
-        C(KC_Z), C(KC_S), LCS(KC_S), MO(1), KC_ENT,
+        C(KC_A),             XXXXXXX, KC_DEL,   
+        KC_PSCR, C(KC_Z), C(KC_Y), MO(1), KC_TAB,
         C(KC_C), C(KC_V), XXXXXXX, XXXXXXX, 
         MO(4), C(KC_X)
     ),
     [2] = LAYOUT( //画面操作系ショートカット
-        LCS(KC_N),             A(KC_W), C(KC_W),   
-        C(KC_N), C(KC_PGUP), C(KC_PGDN), KC_PSCR, A(KC_N),
-        XXXXXXX, XXXXXXX, KC_K, LWIN(KC_TAB), 
-        MO(2), XXXXXXX
+        KC_F5,             C(KC_S), C(KC_W),   
+        LWIN(KC_TAB), LCS(KC_N), C(KC_PGUP), C(KC_PGDN), LCS(KC_S),
+        MO(2), XXXXXXX, A(KC_W), A(KC_N), 
+        XXXXXXX, XXXXXXX
     ),
     [3] = LAYOUT( //電源系ショートカット
         LCS(KC_ESC),             KC_B, KC_C,   
