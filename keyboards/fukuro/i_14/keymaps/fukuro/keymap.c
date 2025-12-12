@@ -16,11 +16,11 @@ const rgblight_segment_t PROGMEM layer0[] = RGBLIGHT_LAYER_SEGMENTS(
      {21, 1, HSV_BLACK}, {22, 1, HSV_ORANGE}, {23, 8, HSV_BLACK} //ディスプレイ
  );
 const rgblight_segment_t PROGMEM layer1[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_ORANGE}, {7, 14, HSV_MAGENTA},  //本体
+    {0, 7, HSV_ORANGE}, {7, 5, HSV_MAGENTA}, {12, 1, HSV_BLACK}, {13, 2, HSV_MAGENTA}, {15, 2, HSV_BLACK}, {17, 4, HSV_MAGENTA},//本体
     {21, 1, HSV_ORANGE}, {22, 9, HSV_BLACK}//ディスプレイ                     
 );
 const rgblight_segment_t PROGMEM layer2[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_ORANGE}, {7, 14, HSV_GOLD},   //本体
+    {0, 7, HSV_ORANGE}, {7, 10, HSV_GOLD}, {17, 3, HSV_BLACK}, {20, 1, HSV_GOLD}, //本体
     {21, 7, HSV_BLACK}, {28, 1, HSV_ORANGE}, {29, 2, HSV_BLACK}//ディスプレイ                     
 );
 const rgblight_segment_t PROGMEM layer3[] = RGBLIGHT_LAYER_SEGMENTS(
@@ -28,7 +28,7 @@ const rgblight_segment_t PROGMEM layer3[] = RGBLIGHT_LAYER_SEGMENTS(
     {21, 4, HSV_BLACK}, {25, 1, HSV_ORANGE}, {26, 5, HSV_BLACK}//ディスプレイ            
 );
 const rgblight_segment_t PROGMEM layer4[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_ORANGE}, {7, 4, HSV_RED}, {11, 6, HSV_BLAck}, {16, 1, HSV_RED}, {17, 4, HSV_BLACK},//本体
+    {0, 7, HSV_ORANGE}, {7, 4, HSV_RED}, {11, 6, HSV_BLACK}, {16, 1, HSV_RED}, {17, 4, HSV_BLACK},//本体
     {21, 6, HSV_BLACK}, {27, 1, HSV_ORANGE}, {28, 3, HSV_BLACK}//ディスプレイ            
  );
 const rgblight_segment_t PROGMEM layer5[] = RGBLIGHT_LAYER_SEGMENTS(
@@ -158,23 +158,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT( //マウスとしての機能
         LALT(KC_RIGHT),           MS_BTN2, KC_BACKSPACE,   
         LALT(KC_LEFT), KC_LEFT, KC_RIGHT, LT(1, KC_UP), KC_ENT,
-        LT(3, KC_SPC), MS_BTN1, TG(5), LWIN(KC_TAB), 
+        LT(3, KC_SPC), MS_BTN1, TG(5), KC_DOWN, 
         MO(2), MS_BTN3
     ),
     [1] = LAYOUT( //コピペなどの頻出ショートカット
-        C(KC_S),             C(KC_S), KC_DEL,   
-        KC_PSCR, A(KC_W), A(KC_N), LCS(KC_S), KC_ENT,
-        C(KC_C), C(KC_V), KC_K, KC_L, 
+        KC_F5,             XXXXXXX, KC_DEL,   
+        C(KC_Z), C(KC_S), LCS(KC_S), MO(1), KC_ENT,
+        C(KC_C), C(KC_V), XXXXXXX, XXXXXXX, 
         MO(4), C(KC_X)
     ),
     [2] = LAYOUT( //画面操作系ショートカット
-        LCS(KC_N),             C(KC_S), C(KC_W),   
-        LCS(KC_ESC), C(KC_PGUP), C(KC_PGDN), LWIN(KC_TAB), KC_ENT,
-        KC_I, KC_J, KC_K, KC_L, 
+        LCS(KC_N),             A(KC_W), C(KC_W),   
+        C(KC_N), C(KC_PGUP), C(KC_PGDN), KC_PSCR, A(KC_N),
+        XXXXXXX, XXXXXXX, KC_K, LWIN(KC_TAB), 
         MO(2), XXXXXXX
     ),
     [3] = LAYOUT( //電源系ショートカット
-        KC_A,             KC_B, KC_C,   
+        LCS(KC_ESC),             KC_B, KC_C,   
         KC_D, KC_E, KC_F, KC_G, KC_H,
         KC_I, KC_J, KC_K, KC_L, 
         KC_O, KC_P
