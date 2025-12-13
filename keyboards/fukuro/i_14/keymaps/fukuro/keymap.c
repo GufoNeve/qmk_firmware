@@ -116,13 +116,27 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
        SEND_STRING("Zu1h0");
     }
     if (keycode == SLP && record->event.pressed) {
-       SEND_STRING(LWIN("X")"US");
+       register_code(KC_LWIN);
+       tap_code(KC_X);
+       unregister_code(KC_LWIN);
+       register_code(KC_U);
+       unregister_code(KC_U);
+       register_code(KC_S);
+       unregister_code(KC_S);
     }
     if (keycode == SHTDN && record->event.pressed) {
-       SEND_STRING(LWIN("X")"UU");
+       register_code(KC_LWIN);
+       tap_code(KC_X);
+       unregister_code(KC_LWIN);
+       tap_code(KC_U);
+       tap_code(KC_U);
     }
     if (keycode == REB && record->event.pressed) {
-       SEND_STRING(LWIN("X")"UR");
+       register_code(KC_LWIN);
+       tap_code(KC_X);
+       unregister_code(KC_LWIN);
+       tap_code(KC_U);
+       tap_code(KC_R);
     }
     return true;
 }
