@@ -96,7 +96,7 @@ void matrix_init_user(void) {
 // カスタムキーコード
 enum custom_keycodes{
     PIN = SAFE_RANGE,
-    PIN1, PIN2, PIN3, PIN4, PIN5
+    PIN1, PIN2, PIN3, PIN4, PIN5,SLP,SHTDN,REB
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
@@ -114,6 +114,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
     }
     if (keycode == PIN5 && record->event.pressed) {
        SEND_STRING("Zu1h0");
+    }
+    if (keycode == SLP && record->event.pressed) {
+       SEND_STRING(LWIN("X")"US");
+    }
+    if (keycode == SHTDN && record->event.pressed) {
+       SEND_STRING(LWIN("X")"UU");
+    }
+    if (keycode == REB && record->event.pressed) {
+       SEND_STRING(LWIN("X")"UR");
     }
     return true;
 }
@@ -175,8 +184,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MO(2), XXXXXXX
     ),
     [3] = LAYOUT( //電源系ショートカット
-        KC_LNG5,             XXXXXXX, KC_PWR,   
-        KC_ESC, LCS(KC_ESC), XXXXXXX, KC_SLEP, KC_WAKE,
+        A(KC_GRV),             XXXXXXX, SHTDN,   
+        KC_ESC, LCS(KC_ESC), XXXXXXX, SLP, REB,
         MO(3), XXXXXXX, KC_LWIN, LWIN(KC_L), 
         XXXXXXX, XXXXXXX
     ),
