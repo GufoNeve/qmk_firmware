@@ -16,7 +16,8 @@ const rgblight_segment_t PROGMEM layer0[] = RGBLIGHT_LAYER_SEGMENTS(
      {21, 1, HSV_BLACK}, {22, 1, HSV_ORANGE}, {23, 8, HSV_BLACK} //ディスプレイ
  );
 const rgblight_segment_t PROGMEM layer1[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_ORANGE}, {7, 5, HSV_MAGENTA}, {12, 1, HSV_BLACK}, {13, 2, HSV_MAGENTA}, {15, 2, HSV_BLACK}, {17, 4, HSV_MAGENTA},//本体
+    {0, 7, HSV_ORANGE}, {7, 5, HSV_MAGENTA}, {12, 1, HSV_BLACK}, {13, 2, HSV_MAGENTA}, 
+    {15, 2, HSV_BLACK}, {17, 4, HSV_MAGENTA},//本体
     {21, 1, HSV_ORANGE}, {22, 9, HSV_BLACK}//ディスプレイ                     
 );
 const rgblight_segment_t PROGMEM layer2[] = RGBLIGHT_LAYER_SEGMENTS(
@@ -24,8 +25,8 @@ const rgblight_segment_t PROGMEM layer2[] = RGBLIGHT_LAYER_SEGMENTS(
     {21, 7, HSV_BLACK}, {28, 1, HSV_ORANGE}, {29, 2, HSV_BLACK}//ディスプレイ                     
 );
 const rgblight_segment_t PROGMEM layer3[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_ORANGE}, {7, 3, HSV_GREEN}, {10, 1, HSV_BLACK}, {11, 1, HSV_WHITE}, {12, 1, HSV_BLACK}, 
-    {13, 2, HSV_RED}, {15, 1, HSV_WHITE}, {16, 2, HSV_GREEN}, {18, 3, HSV_BLACK}, //本体
+    {0, 7, HSV_ORANGE}, {7, 3, HSV_GREEN}, {10, 1, HSV_BLACK}, {11, 2, HSV_GREEN}, 
+    {13, 2, HSV_RED}, {15, 2, HSV_WHITE}, {17, 1, HSV_GREEN}, {18, 3, HSV_BLACK}, //本体
     {21, 4, HSV_BLACK}, {25, 1, HSV_ORANGE}, {26, 5, HSV_BLACK}//ディスプレイ            
 );
 const rgblight_segment_t PROGMEM layer4[] = RGBLIGHT_LAYER_SEGMENTS(
@@ -33,23 +34,27 @@ const rgblight_segment_t PROGMEM layer4[] = RGBLIGHT_LAYER_SEGMENTS(
     {21, 6, HSV_BLACK}, {27, 1, HSV_ORANGE}, {28, 3, HSV_BLACK}//ディスプレイ            
  );
 const rgblight_segment_t PROGMEM layer5[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_ORANGE}, {7, 14, HSV_SPRINGGREEN},  //本体
+    {0, 7, HSV_AZURE}, {7, 5, HSV_SPRINGGREEN}, {12, 3, HSV_BLUE}, {15, 1, HSV_SPRINGGREEN}, {16, 4, HSV_BLUE}, //本体
+    {20, 1, HSV_SPRINGGREEN},
     {21, 8, HSV_BLACK}, {29, 1, HSV_ORANGE}, {30, 1, HSV_BLACK}//ディスプレイ           
  );
  const rgblight_segment_t PROGMEM layer6[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_ORANGE}, {7, 14, HSV_BLUE},  //本体
+    {0, 7, HSV_AZURE}, {7, 5, HSV_MAGENTA}, {12, 1, HSV_BLACK}, {13, 2, HSV_MAGENTA}, 
+    {15, 2, HSV_BLACK}, {17, 4, HSV_MAGENTA},  //本体
     {21, 9, HSV_BLACK}, {30, 1, HSV_ORANGE}//ディスプレイ
 );
 const rgblight_segment_t PROGMEM layer7[] = RGBLIGHT_LAYER_SEGMENTS(
-     {0, 7, HSV_ORANGE}, {7, 14, HSV_BLUE},  //本体
+     {0, 7, HSV_AZURE}, {7, 10, HSV_GOLD}, {17, 3, HSV_BLACK}, {20, 1, HSV_GOLD},  //本体
      {21, 2, HSV_BLACK}, {23, 1, HSV_ORANGE}, {24, 7, HSV_BLACK}//ディスプレイ
 );
 const rgblight_segment_t PROGMEM layer8[] = RGBLIGHT_LAYER_SEGMENTS(
-     {0, 7, HSV_ORANGE}, {7, 14, HSV_BLUE},  //本体
+     {0, 7, HSV_AZURE}, {7, 5, HSV_GREEN}, {12, 2, HSV_WHITE}, {14, 3, HSV_BLACK}, 
+     {17, 1, HSV_GREEN}, {18, 3, HSV_BLACK},  //本体
      {21, 5, HSV_BLACK}, {26, 1, HSV_ORANGE}, {27, 4, HSV_BLACK}//ディスプレイ
 );
 const rgblight_segment_t PROGMEM layer9[] = RGBLIGHT_LAYER_SEGMENTS(
-     {0, 7, HSV_ORANGE}, {7, 14, HSV_BLUE},  //本体
+     {0, 7, HSV_AZURE}, {7, 4, HSV_ORANGE}, {11, 1, HSV_MAGENTA}, {12, 2, HSV_ORANGE}, {14, 1, HSV_MAGENTA}, 
+     {15, 1, HSV_SPRINGGREEN}, {16, 3, HSV_ORANGE}, {19, 1, HSV_MAGENTA}, {20, 1, HSV_ORANGE}, //本体
      {21, 3, HSV_BLACK}, {24, 1, HSV_ORANGE}, {25, 6, HSV_BLACK}//ディスプレイ
 );
 
@@ -96,7 +101,7 @@ void matrix_init_user(void) {
 // カスタムキーコード
 enum custom_keycodes{
     PIN = SAFE_RANGE,
-    PIN1, PIN2, PIN3, PIN4, PIN5,SLP,SHTDN,REB
+    PIN1, PIN2, PIN3, PIN4, PIN5
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t* record) {
@@ -115,92 +120,49 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
     if (keycode == PIN5 && record->event.pressed) {
        SEND_STRING("Zu1h0");
     }
-    if (keycode == SLP && record->event.pressed) {
-       register_code(KC_LWIN);
-       tap_code(KC_X);
-       unregister_code(KC_LWIN);
-       register_code(KC_U);
-       unregister_code(KC_U);
-       register_code(KC_S);
-       unregister_code(KC_S);
-    }
-    if (keycode == SHTDN && record->event.pressed) {
-       register_code(KC_LWIN);
-       tap_code(KC_X);
-       unregister_code(KC_LWIN);
-       tap_code(KC_U);
-       tap_code(KC_U);
-    }
-    if (keycode == REB && record->event.pressed) {
-       register_code(KC_LWIN);
-       tap_code(KC_X);
-       unregister_code(KC_LWIN);
-       tap_code(KC_U);
-       tap_code(KC_R);
-    }
     return true;
 }
 
 
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
-    [0] =  {
-        ENCODER_CCW_CW(KC_WH_U, KC_WH_D)  // たて
-    },
-    [1] =  {
-        ENCODER_CCW_CW(_______, _______)
-    },
-    [2] =  {
-        ENCODER_CCW_CW(_______, _______)
-    },
-    [3] =  {
-        ENCODER_CCW_CW(_______, _______)
-    },
-    [4] =  {
-        ENCODER_CCW_CW(_______, _______)
-    },
-    [5] =  {
-        ENCODER_CCW_CW(_______, _______)
-    },
-    [6] =  {
-        ENCODER_CCW_CW(_______, _______)
-    },
-    [7] =  {
-        ENCODER_CCW_CW(_______, _______)
-    },
-    [8] =  {
-        ENCODER_CCW_CW(_______, _______)
-    },
-    [9] =  {
-        ENCODER_CCW_CW(_______, _______)
-    }
+    [0] =  {   ENCODER_CCW_CW(MS_WHLD, MS_WHLU) }, // 下　上 の順 
+    [1] =  {   ENCODER_CCW_CW(_______, _______) },
+    [2] =  {   ENCODER_CCW_CW(MS_WHLR, MS_WHLL) },
+    [3] =  {   ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+    [4] =  {   ENCODER_CCW_CW(XXXXXXX, XXXXXXX) },
+    [5] =  {   ENCODER_CCW_CW(MS_WHLD, MS_WHLL) },
+    [6] =  {   ENCODER_CCW_CW(_______, _______) },
+    [7] =  {   ENCODER_CCW_CW(_______, _______) },
+    [8] =  {   ENCODER_CCW_CW(_______, _______) },
+    [9] =  {   ENCODER_CCW_CW(KC_BSPC, KC_TAB)  }
 };
 #endif
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    
     [0] = LAYOUT( //マウスとしての機能
-        LALT(KC_RIGHT),           MS_BTN2, KC_BACKSPACE,   
+        LALT(KC_RIGHT),           MS_BTN2, KC_BSPC,   
         LALT(KC_LEFT), KC_LEFT, KC_RIGHT, LT(1, KC_UP), KC_ENT,
         LT(3, MS_BTN1), MS_BTN1, TG(5), KC_DOWN, 
         LT(2, KC_SPC), MS_BTN3
     ),
     [1] = LAYOUT( //コピペなどの頻出ショートカット
-        C(KC_A),             XXXXXXX, KC_DEL,   
+        C(KC_F),             XXXXXXX, KC_DEL,   
         KC_PSCR, C(KC_Z), C(KC_Y), MO(1), KC_TAB,
         C(KC_C), C(KC_V), XXXXXXX, XXXXXXX, 
         MO(4), C(KC_X)
     ),
     [2] = LAYOUT( //画面操作系ショートカット
         KC_F5,             C(KC_S), C(KC_W),   
-        LWIN(KC_TAB), LCS(KC_N), C(KC_PGUP), C(KC_PGDN), LCS(KC_S),
-        XXXXXXX, XXXXXXX, A(KC_W), A(KC_N), 
+        LWIN(KC_TAB), C(KC_T), C(KC_PGUP), C(KC_PGDN), LCS(KC_S),
+        XXXXXXX, XXXXXXX, C(KC_A), A(KC_W), 
         MO(2), XXXXXXX
     ),
-    [3] = LAYOUT( //電源系ショートカット
-        A(KC_GRV),             XXXXXXX, SHTDN,   
-        KC_ESC, LCS(KC_ESC), XXXXXXX, SLP, REB,
-        MO(3), XXXXXXX, KC_LWIN, LWIN(KC_L), 
+    [3] = LAYOUT( //電源&WIN系ショートカット
+        A(KC_GRV),             LCS(KC_ESC), LWIN(KC_L),   
+        KC_ESC, LCS(KC_N), XXXXXXX, LWIN(KC_E), KC_LWIN,
+        MO(3), XXXXXXX, LCG(KC_V), LWIN(KC_I), 
         XXXXXXX, XXXXXXX
     ),
     [4] = LAYOUT( //PIN
@@ -210,34 +172,34 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MO(4), XXXXXXX
     ),
     [5] = LAYOUT( //イラレ用1
-        KC_A,             KC_B, KC_C,   
-        KC_D, KC_E, KC_F, KC_G, KC_H,
-        KC_I, KC_J, TG(5), KC_L, 
-        KC_O, KC_P
+        KC_V,             MS_BTN2, KC_BSPC,   
+        C(KC_Z), C(KC_1), KC_INT3, LT(6, KC_M), KC_ENT,
+        LT(8, MS_BTN1), MS_BTN1, TG(5), TG(9), 
+        LT(7, C(KC_G)), MS_BTN3
     ),
     [6] = LAYOUT( //イラレ用2
-        KC_A,             KC_B, KC_C,   
-        KC_D, KC_E, KC_F, KC_G, KC_H,
-        KC_I, KC_J, KC_K, KC_L, 
-        KC_O, KC_P
+        KC_R,             XXXXXXX, KC_DEL,   
+        LCS(KC_Z), C(KC_2), KC_L, MO(6), KC_TAB,
+        C(KC_C), C(KC_V), XXXXXXX, XXXXXXX, 
+        LCS(KC_G), C(KC_X)
     ),
-    [7] = LAYOUT( //
-        KC_A,             KC_B, KC_C,   
-        KC_D, KC_E, KC_F, KC_G, KC_H,
-        KC_I, KC_J, KC_K, KC_L, 
-        KC_O, KC_P
+    [7] = LAYOUT( //イラレ用3
+        KC_A,             C(KC_S), C(KC_W),   
+        LWIN(KC_TAB), LCA(KC_L), C(KC_PGUP), C(KC_PGDN), LCS(KC_S),
+        XXXXXXX, XXXXXXX, C(KC_A), A(KC_N), 
+        MO(7), XXXXXXX
     ),
-    [8] = LAYOUT( //
-        KC_A,             KC_B, KC_C,   
-        KC_D, KC_E, KC_F, KC_G, KC_H,
-        KC_I, KC_J, KC_K, KC_L, 
-        KC_O, KC_P
+    [8] = LAYOUT( //イラレ用4
+        A(KC_GRV),             A(KC_F), A(KC_O),   
+        KC_ESC, LCA(KC_7), LCA(KC_8), LCS(KC_LBRC), XXXXXXX,
+        MO(8), XXXXXXX, XXXXXXX, XXXXXXX, 
+        XXXXXXX, XXXXXXX
     ),
-    [9] = LAYOUT( //
-        KC_A,             KC_B, KC_C,   
-        KC_D, KC_E, KC_F, KC_G, KC_H,
-        KC_I, KC_J, KC_K, KC_L, 
-        KC_O, KC_P
+    [9] = LAYOUT( //簡易テンキー
+        KC_7,             KC_8, KC_9,   
+        KC_4, KC_5, KC_6, KC_DOT, KC_MINS,
+        KC_1, KC_2, KC_3, TG(9), 
+        KC_0, S(KC_SCLN)
     )
 };
 
