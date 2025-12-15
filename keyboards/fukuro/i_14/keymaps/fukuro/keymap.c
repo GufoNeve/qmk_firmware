@@ -131,7 +131,7 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [2] =  {   ENCODER_CCW_CW(MS_WHLR, MS_WHLL) },
     [3] =  {   ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
     [4] =  {   ENCODER_CCW_CW(XXXXXXX, XXXXXXX) },
-    [5] =  {   ENCODER_CCW_CW(MS_WHLD, MS_WHLL) },
+    [5] =  {   ENCODER_CCW_CW(MS_WHLD, MS_WHLU) },
     [6] =  {   ENCODER_CCW_CW(_______, _______) },
     [7] =  {   ENCODER_CCW_CW(_______, _______) },
     [8] =  {   ENCODER_CCW_CW(_______, _______) },
@@ -175,7 +175,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_V,             MS_BTN2, KC_BSPC,   
         C(KC_Z), C(KC_1), KC_INT3, LT(6, KC_M), KC_ENT,
         LT(8, MS_BTN1), MS_BTN1, TG(5), TG(9), 
-        LT(7, C(KC_G)), MS_BTN3
+        LT(7, KC_G), MS_BTN3
     ),
     [6] = LAYOUT( //イラレ用2
         KC_R,             XXXXXXX, KC_DEL,   
