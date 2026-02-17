@@ -1,0 +1,148 @@
+{
+  "keyboard_name": "CST50_Zuiho_ad_ACB6_Mabel_right",
+  "manufacturer": "Fukuro",
+  "url": "",
+  "maintainer": "Fukuro",
+  "usb": {
+    "vid": "0xFEED",
+    "pid": "0x0000",
+    "device_version": "1.0.0"
+},
+"features": {
+    "bootmagic": true,
+    "mousekey": true,
+    "extrakey": true,
+    "nkro": true,
+    "pointing_device": true
+},
+"bootmagic": {
+        "enabled": true,
+        "matrix": [0, 10],
+        "matrix": [11, 0]
+    },
+    
+    "mouse_key": {
+        "enabled": true
+    },
+    "tapping": {
+        "hold_on_other_key_press": true
+    },
+    "rgblight": {
+        "led_count": 89,
+        "split": true,
+        "split_count": [33, 56],
+        "hue_steps": 4,
+        "saturation_steps": 2,
+        "brightness_steps": 2,
+        "sleep": true,
+        "animations": {
+             "breathing": false,
+             "rainbow_mood": false,
+             "rainbow_swirl": false,
+             "snake": false,
+             "knight": false,
+             "christmas": false,
+             "static_gradient": false,
+             "rgb_test": false,
+             "alternating": false
+            }
+        },
+        "ws2812": {
+    "pin": "GP9",
+    "driver": "vendor"
+},
+
+    "dynamic_keymap": {
+        "layer_count": 10
+    },
+
+    "encoder": {
+        "enabled": true,
+        "rotary": [
+            { "pin_a": "GP8", "pin_b": "GP14", "resolution": 3}
+        ]
+    },
+  "matrix_pins": {
+    "cols": ["GP2","GP29","GP3","GP28","GP4","GP27","GP5","GP26","GP6","GP15","GP7"],
+    "rows": ["GP29","GP2","GP28","GP3","GP27","GP4","GP26","GP5","GP15","GP6","GP7"]
+},
+"split": {
+    "enabled": true,
+    "main": "left",  
+      "protocol": "serial"
+    },
+    "soft_serial_pin": "GP1", 
+      "left": {
+        "rows": ["GP29","GP2","GP28","GP3","GP27","GP4","GP26","GP5","GP15","GP6","GP7"], 
+        "cols": ["GP2","GP29","GP3","GP28","GP4","GP27","GP5","GP26","GP6","GP15","GP7"] 
+      },
+      "right": {
+        "rows": ["GP29","GP2","GP28","GP3","GP27","GP4","GP26","GP5","GP15","GP6","GP7"], 
+        "cols": ["GP2","GP29","GP3","GP28","GP4","GP27","GP5","GP26","GP6","GP15","GP7"] 
+      },
+    
+  "layouts": {
+    "LAYOUT": {
+      "layout": [
+{"x": 1,"y": 0.75,"matrix": [  0,  0]},
+{"x": 2,"y": 0.5,"matrix": [  0,  2]},
+{"x": 3,"y": 0.75,"matrix": [  0,  4]},
+{"x": 4,"y": 0.5,"matrix": [  0,  6]},
+{"x": 5,"y": 0.75,"matrix": [  0,  8]},
+{"x": 6,"y": 1,"matrix": [  0,  10]},
+{"x": 9.25,"y": 1,"matrix": [  11,  0]},
+{"x": 10.25,"y": 0.75,"matrix": [  11,  2]},
+{"x": 11.25,"y": 0.5,"matrix": [  11,  4]},
+{"x": 12.25,"y": 0.75,"matrix": [  11,  6]},
+{"x": 13.25,"y": 0.5,"matrix": [  11,  8]},
+{"x": 14.25,"y": 0.75,"matrix": [  11,  10]},
+{"x": 0.25,"y": 1.75,"w": 1.75,"matrix": [  2,  0]},
+{"x": 2,"y": 1.5,"matrix": [  2,  2]},
+{"x": 3,"y": 1.75,"matrix": [  2,  4]},
+{"x": 4,"y": 1.5,"matrix": [  2,  6]},
+{"x": 5,"y": 1.75,"matrix": [  2,  8]},
+{"x": 6,"y": 2,"matrix": [  2,  10]},
+{"x": 9.25,"y": 2,"matrix": [  13,  0]},
+{"x": 10.25,"y": 1.75,"matrix": [  13,  2]},
+{"x": 11.25,"y": 1.5,"matrix": [  13,  4]},
+{"x": 12.25,"y": 1.75,"matrix": [  13,  6]},
+{"x": 13.25,"y": 1.5,"matrix": [  13,  8]},
+{"x": 14.25,"y": 1.75,"w": 1.75,"matrix": [  13,  10]},
+{"x": 16.25,"y": 1.5,"matrix": [  19,  6]},
+{"x": 19.25,"y": 1.5,"matrix": [  19,  10]},
+{"x": 0.5,"y": 2.75,"w": 1.5,"matrix": [  4,  0]},
+{"x": 2,"y": 2.5,"matrix": [  4,  2]},
+{"x": 3,"y": 2.75,"matrix": [  4,  4]},
+{"x": 4,"y": 2.5,"matrix": [  4,  6]},
+{"x": 5,"y": 2.75,"matrix": [  4,  8]},
+{"x": 6,"y": 3,"matrix": [  4,  10]},
+{"x": 9.25,"y": 3,"matrix": [  15,  0]},
+{"x": 10.25,"y": 2.75,"matrix": [  15,  2]},
+{"x": 11.25,"y": 2.5,"matrix": [  15,  4]},
+{"x": 12.25,"y": 2.75,"matrix": [  15,  6]},
+{"x": 13.25,"y": 2.5,"matrix": [  15,  8]},
+{"x": 14.25,"y": 2.75,"w": 1.5,"matrix": [  15,  10]},
+{"x": 16.25,"y": 2.5,"matrix": [  18,  9]},
+{"x": 19.25,"y": 2.5,"matrix": [  21,  9]},
+{"x": 1,"y": 3.75,"matrix": [  6,  0]},
+{"x": 2,"y": 3.5,"matrix": [  6,  2]},
+{"x": 3,"y": 3.75,"w": 1.25,"matrix": [  6,  4]},
+{"x": 12,"y": 3.75,"w": 1.25,"matrix": [  17,  6]},
+{"x": 13.25,"y": 3.5,"matrix": [  17,  8]},
+{"x": 14.25,"y": 3.75,"matrix": [  17,  10]},
+{"x": 16.25,"y": 3.75,"matrix": [  19,  8]},
+{"x": 17.25,"y": 3.5,"matrix": [  20,  9]},
+{"x": 5.5,"y": 4.5,"matrix": [  6,  8]},
+{"x": 6.5,"y": 4.5,"w": 1.25,"matrix": [  6,  10]},
+{"x": 8.5,"y": 4.5,"w": 1.25,"matrix": [  17,  0]},
+{"x": 9.75,"y": 4.5,"matrix": [  17,  2]},
+{"x": 5.5,"y": 5.5,"w": 1.25,"matrix": [  8,  8]},
+{"x": 6.75,"y": 5.5,"matrix": [  8,  10]},
+{"x": 8.5,"y": 5.5,"matrix": [  19,  0]},
+{"x": 9.5,"y": 5.5,"w": 1.25,"matrix": [  19,  2]}
+      ]
+  }
+},
+  "dynamic_keymap": {
+    "layer_count": 10
+}}
