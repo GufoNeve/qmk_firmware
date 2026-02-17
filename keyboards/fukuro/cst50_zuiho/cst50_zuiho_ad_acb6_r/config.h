@@ -3,18 +3,25 @@
 
 #pragma once
 
+#define EEPROM_SIZE 2048
+#define WEAR_LEVELING_RP2040_FLASH_SIZE (2 * 1024 * 1024)
+#define DYNAMIC_KEYMAP_EEPROM_MAX_ADDR (EEPROM_SIZE - 1)
+
 #define SPLIT_HAND_MATRIX_GRID GP26, GP5
 #define SPLIT_HAND_MATRIX_GRID_LOW_IS_LEFT
 #define MATRIX_GRID_PULLDOWN
 #define SPLIT_LAYER_STATE_ENABLE
 
+#define BOOTMAGIC_LITE_ROW 0      // 左側の行 (row)
+#define BOOTMAGIC_LITE_COLUMN 10  // 左側の列 (column)
+#define BOOTMAGIC_LITE_ROW_RIGHT 11    // 右側の行 (row)
+#define BOOTMAGIC_LITE_COLUMN_RIGHT 0  // 右側の列 (column)
 
-
-#define SERIAL_USART_FULL_DUPLEX  // フルデュプレックスモード（Tx/Rx別ピン）
-#define SERIAL_USART_TX_PIN GP0   // Txピン
-#define SERIAL_USART_RX_PIN GP1   // Rxピン
-#define SERIAL_USART_DRIVER SD1   // RP2040の場合のドライバID（MCUによる）
-#define SERIAL_USART_TX_PAL_MODE 7  // ピンモード（RP2040推奨値）
+#define SERIAL_USART_FULL_DUPLEX  
+#define SERIAL_USART_TX_PIN GP0  
+#define SERIAL_USART_RX_PIN GP1   
+#define SERIAL_USART_DRIVER SD1   
+#define SERIAL_USART_TX_PAL_MODE 7  
 #define SERIAL_USART_RX_PAL_MODE 7
 
 #define SPI_DRIVER SPID1
