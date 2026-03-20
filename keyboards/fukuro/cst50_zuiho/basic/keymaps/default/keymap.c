@@ -12,62 +12,78 @@ void pointing_device_init_kb(void) {
 
 
 const rgblight_segment_t PROGMEM layer0[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 8, HSV_RED}, {8, 25, HSV_BLUE},  //本体左側
-    {33, 8, HSV_RED}, {41, 25, HSV_BLUE},//本体右側
+    {0, 8, HSV_GREEN}, {8, 25, HSV_WHITE},  //本体左側
+    {33, 8, HSV_GREEN}, {41, 25, HSV_WHITE},//本体右側
     {66, 1, HSV_BLACK}, {67, 1, HSV_ORANGE}, {68, 8, HSV_BLACK} //レイヤーディスプレイ(66~76)
     
  );
 const rgblight_segment_t PROGMEM layer1[] = RGBLIGHT_LAYER_SEGMENTS(
-   {0, 8, HSV_RED}, {8, 25, HSV_BLUE},  //本体左側
-    {33, 8, HSV_RED}, {41, 25, HSV_BLUE},//本体右側
+   {0, 8, HSV_GREEN}, {8, 1, HSV_BLACK}, {9, 4, HSV_SPRINGGREEN}, {13,2, HSV_WHITE}, {15, 10, HSV_SPRINGGREEN},
+   {25, 2, HSV_WHITE}, {27, 1, HSV_BLACK}, {28, 1, HSV_WHITE}, {29, 1, HSV_BLUE}, {30, 1, HSV_GOLD}, {31, 1, HSV_MAGENTA}, {32, 1, HSV_BLUE},  //本体左側
+    {33, 8, HSV_GREEN}, {41, 5, HSV_BLACK}, {46, 2, HSV_GOLD}, {48, 1, HSV_BLACK}, {49, 1, HSV_SPRINGGREEN}, {50, 5, HSV_BLACK},
+    {55, 3, HSV_SPRINGGREEN}, {58, 2, HSV_WHITE}, {60, 1, HSV_BLACK}, {61, 1, HSV_WHITE}, {62, 1, HSV_GOLD}, {63, 1, HSV_SPRINGGREEN},
+    {64, 1, HSV_MAGENTA}, {65, 1, HSV_BLACK}, //本体右側
     {66, 1, HSV_ORANGE}, {67, 9, HSV_BLACK} //レイヤーディスプレイ(66~76) 
                         
 );
 const rgblight_segment_t PROGMEM layer2[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 8, HSV_RED}, {8, 25, HSV_BLUE},  //本体左側
-    {33, 8, HSV_RED}, {41, 25, HSV_BLUE},//本体右側
+    {0, 8, HSV_GREEN}, {8, 5, HSV_BLACK}, {13, 2, HSV_WHITE}, {15, 3, HSV_BLUE}, {18, 1, HSV_BLACK}, {19, 6, HSV_BLUE}, {25, 2, HSV_WHITE},
+    {27, 1, HSV_BLACK}, {28, 1, HSV_WHITE}, {29, 3, HSV_BLACK}, {32, 1, HSV_BLUE}, //本体左側
+    {33, 8, HSV_GREEN}, {41, 5, HSV_BLACK}, {46, 2, HSV_GOLD}, {48, 1, HSV_BLACK}, {49, 1, HSV_SPRINGGREEN}, {50, 5, HSV_BLACK},
+    {55, 3, HSV_SPRINGGREEN}, {58, 2, HSV_WHITE}, {60, 1, HSV_BLACK}, {61, 1, HSV_WHITE}, {62, 4, HSV_BLACK},//本体右側
     {66, 7, HSV_BLACK}, {73, 1, HSV_ORANGE}, {74, 2, HSV_BLACK} //レイヤーディスプレイ(66~76)       
                   
 );
 const rgblight_segment_t PROGMEM layer3[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 8, HSV_RED}, {8, 25, HSV_BLUE},  //本体左側
-    {33, 8, HSV_RED}, {41, 25, HSV_BLUE},//本体右側
+    {0, 8, HSV_GREEN}, {8, 25, HSV_BLACK},  //本体左側
+    {33, 8, HSV_GREEN}, {41, 8, HSV_BLACK}, {49, 3, HSV_WHITE}, {52, 2, HSV_BLACK}, {54, 3, HSV_WHITE}, {57, 1, HSV_BLACK}, {58, 1, HSV_WHITE},
+    {59, 1, HSV_BLACK}, {60, 1, HSV_WHITE}, {61, 5, HSV_BLACK}, //本体右側
     {66, 4, HSV_BLACK}, {70, 1, HSV_ORANGE}, {71, 5, HSV_BLACK}//レイヤーディスプレイ(66~76)
                 
 );
 const rgblight_segment_t PROGMEM layer4[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 8, HSV_RED}, {8, 25, HSV_BLUE},  //本体左側
-    {33, 8, HSV_RED}, {41, 25, HSV_BLUE},//本体右側
+    {0, 8, HSV_GREEN}, {8, 25, HSV_BLACK},  //本体左側
+    {33, 8, HSV_GREEN}, {41, 8, HSV_BLACK}, {49, 3, HSV_RED}, {52, 2, HSV_BLACK}, {54, 3, HSV_RED}, {57, 1, HSV_BLACK}, {58, 1, HSV_WHITE},
+    {59, 1, HSV_BLACK}, {60, 1, HSV_WHITE}, {61, 1, HSV_BLACK}, {62, 1, HSV_RED}, {63, 3, HSV_BLACK},//本体右側
     {66, 6, HSV_BLACK}, {72, 1, HSV_ORANGE}, {73, 3, HSV_BLACK} //レイヤーディスプレイ(66~76)
                 
  );
 const rgblight_segment_t PROGMEM layer5[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 8, HSV_RED}, {8, 25, HSV_BLUE},  //本体左側
-    {33, 8, HSV_RED}, {41, 25, HSV_BLUE},//本体右側
+    {0, 8, HSV_GREEN}, {8, 5, HSV_BLACK}, {13, 2, HSV_WHITE}, {15, 10, HSV_BLACK}, {25, 1, HSV_RED}, {26, 3, HSV_WHITE}, {29, 4, HSV_BLACK},  //本体左側
+    {33, 8, HSV_GREEN}, {41, 12, HSV_BLACK}, {53, 2, HSV_GOLD}, {55, 3, HSV_BLACK}, {58, 1, HSV_RED}, {59, 1, HSV_WHITE}, {60, 1, HSV_BLACK},
+    {61, 1, HSV_WHITE}, {62, 1, HSV_GOLD}, {63, 3, HSV_BLACK}, //本体右側
     {66, 8, HSV_BLACK}, {74, 1, HSV_ORANGE}, {75, 1, HSV_BLACK} //レイヤーディスプレイ(66~76) 
               
  );
  const rgblight_segment_t PROGMEM layer6[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 8, HSV_RED}, {8, 25, HSV_BLUE},  //本体左側
-    {33, 8, HSV_RED}, {41, 25, HSV_BLUE},//本体右側
+    {0, 8, HSV_GREEN}, {8, 3, HSV_BLACK}, {11, 2, HSV_SPRINGGREEN}, {13, 2, HSV_WHITE}, {15, 3, HSV_SPRINGGREEN}, {18, 7, HSV_BLACK},
+    {26, 3, HSV_WHITE}, {29, 4, HSV_BLACK}, //本体左側
+    {33, 8, HSV_GREEN}, {41, 5, HSV_MAGENTA}, {46, 2, HSV_GOLD}, {48, 10, HSV_MAGENTA}, {58, 2, HSV_WHITE}, {60, 1, HSV_BLACK}, {61, 1, HSV_WHITE},
+    {62, 2, HSV_BLACK}, {64, 1, HSV_MAGENTA}, {65, 1, HSV_BLACK}, //本体右側
     {66, 9, HSV_BLACK}, {75, 1, HSV_ORANGE} //レイヤーディスプレイ(66~76)
     
 );
 const rgblight_segment_t PROGMEM layer7[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 8, HSV_RED}, {8, 25, HSV_BLUE},  //本体左側
-    {33, 8, HSV_RED}, {41, 25, HSV_BLUE},//本体右側
+    {0, 8, HSV_GREEN}, {8, 3, HSV_BLACK}, {11, 2, HSV_SPRINGGREEN}, {13, 2, HSV_WHITE}, {15, 3, HSV_SPRINGGREEN}, {18, 7, HSV_BLACK},
+    {25, 3, HSV_WHITE}, {28, 1, HSV_BLUE}, {29, 3, HSV_BLACK}, //本体左側
+    {33, 8, HSV_GREEN}, {41, 4, HSV_BLUE}, {45, 1, HSV_BLACK}, {46, 2, HSV_GOLD}, {48, 1, HSV_BLACK}, {49, 8, HSV_BLUE},
+    {57, 1, HSV_BLACK}, {58, 1, HSV_BLUE}, {59, 1, HSV_WHITE}, {60, 1, HSV_BLACK}, {61, 1, HSV_WHITE}, {62, 4, HSV_BLACK}, //本体右側
     {66, 2, HSV_BLACK}, {68, 1, HSV_ORANGE}, {69, 7, HSV_BLACK} //レイヤーディスプレイ(66~76)
     
 );
 const rgblight_segment_t PROGMEM layer8[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 8, HSV_RED}, {8, 25, HSV_BLUE},  //本体左側
-    {33, 8, HSV_RED}, {41, 25, HSV_BLUE},//本体右側
+    {0, 8, HSV_GREEN}, {8, 6, HSV_GOLD}, {14, 1, HSV_WHITE}, {15, 2, HSV_BLACK}, {17, 6, HSV_GOLD}, {23, 2, HSV_BLACK}, {25, 4, HSV_WHITE},
+    {29, 3, HSV_BLACK}, {32, 1, HSV_GOLD}, //本体左側
+    {33, 8, HSV_GREEN}, {41, 7, HSV_GOLD}, {48, 1, HSV_BLACK}, {49, 1, HSV_SPRINGGREEN}, {50, 3, HSV_GOLD}, {53, 2, HSV_BLACK},
+    {55, 3, HSV_SPRINGGREEN}, {58, 1, HSV_GOLD}, {59, 3, HSV_WHITE}, {62, 3, HSV_BLACK}, {65, 1, HSV_GOLD},//本体右側
     {66, 5, HSV_BLACK}, {71, 1, HSV_ORANGE}, {72, 4, HSV_BLACK} //レイヤーディスプレイ(66~76)
     
 );
 const rgblight_segment_t PROGMEM layer9[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 8, HSV_RED}, {8, 25, HSV_BLUE},  //本体左側
-    {33, 8, HSV_RED}, {41, 25, HSV_BLUE},//本体右側
+    {0, 8, HSV_GREEN}, {8, 5, HSV_MAGENTA}, {13, 2, HSV_WHITE}, {15, 10, HSV_MAGENTA}, {25, 4, HSV_WHITE}, {29, 2, HSV_BLACK}, 
+    {31, 1, HSV_MAGENTA}, {32, 1, HSV_BLACK}, //本体左側
+    {33, 8, HSV_GREEN}, {41, 5, HSV_BLACK}, {46, 2, HSV_GOLD}, {48, 1, HSV_BLACK}, {49, 1, HSV_SPRINGGREEN}, {50, 5, HSV_BLACK},
+    {55, 3, HSV_SPRINGGREEN}, {58, 2, HSV_WHITE}, {60, 1, HSV_BLACK}, {61, 1, HSV_WHITE}, {62, 4, HSV_BLACK},//本体右側
     {66, 3, HSV_BLACK}, {69, 1, HSV_ORANGE}, {70, 6, HSV_BLACK} //レイヤーディスプレイ(66~76)
     
 );
@@ -132,83 +148,83 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    
     [0] = LAYOUT( //ベースレイヤー
         A(KC_GRV), KC_Q, KC_W, KC_E, KC_R, KC_T,         KC_Y, KC_U, KC_I, KC_O, KC_MINS, KC_BSPC,
-        KC_TAB, KC_A, KC_S, KC_D, KC_F, KC_G,             KC_H, KC_J, KC_K, KC_L, KC_P, KC_ENT,            
-        KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B,     KC_B, KC_N, KC_M, KC_COMM, KC_DOT, LT(3, KC_ENT), 
-        KC_LCTL, KC_LGUI, KC_LALT,                                   KC_GRV, KC_SLSH, LT(2, KC_BSLS), 
-                                TG(1), LT(9,KC_INT5),   MO(9), TG(1),
-                        LT(8, KC_SPC), LT(8, KC_SPC), LT(8, KC_SPC), LT(8, KC_SPC)
+        KC_LSFT, KC_A, KC_S, KC_D, KC_F, KC_G,             KC_H, KC_J, KC_K, KC_L, KC_P, KC_ENT,            
+        KC_TAB, KC_Z, KC_X, KC_C, KC_V, KC_B,     KC_B, KC_N, KC_M, KC_COMM, KC_DOT, LT(7, KC_ENT), 
+        KC_LCTL, KC_LGUI, KC_LALT,                                   KC_RCTL, LT(3, KC_SLSH), KC_RSFT, 
+                            LT(7,KC_INT5), TG(1),    TG(1), MO(5),
+                        LT(8, KC_SPC), LT(9, KC_SPC), LT(6, KC_SPC), LT(8, KC_SPC)
     ),
-    [1] = LAYOUT( //ショートカット置き場
-        A(KC_GRV), KC_Q, KC_W, KC_E, KC_R, KC_T,         KC_Y, KC_U, KC_I, KC_O, KC_MINS, KC_BSPC,
-        KC_TAB, KC_A, KC_S, KC_D, KC_F, KC_G,             KC_H, KC_J, KC_K, KC_L, KC_P, KC_ENT,            
-        KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B,     KC_B, KC_N, KC_M, KC_COMM, KC_DOT, LT(3, KC_ENT), 
-        KC_LCTL, KC_LGUI, KC_LALT,                                   KC_GRV, KC_SLSH, LT(2, KC_BSLS), 
-                                TG(1), LT(9,KC_INT5),   MO(9), TG(1),
-                        LT(8, KC_SPC), LT(8, KC_SPC), LT(8, KC_SPC), LT(8, KC_SPC)
+    [1] = LAYOUT( //イラレショートカット
+        A(KC_GRV), KC_ESC, C(A(KC_7)), C(A(KC_8)), C(A(KC_L)), KC_T,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL,
+        KC_LSFT, KC_A, KC_S, S(KC_O), C(S(KC_F)), KC_G,                    XXXXXXX, XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, KC_BSPC,            
+        KC_TAB, KC_Z, C(KC_1), KC_BSLS, KC_V, KC_M,                           XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, LT(7, KC_ENT), 
+        KC_LCTL, XXXXXXX, KC_LALT,                                                                        KC_RCTL, XXXXXXX, KC_RSFT, 
+                                                XXXXXXX, TG(1),    TG(1), MO(5),
+                                        LT(2, KC_SPC), LT(9, KC_SPC),    LT(6, KC_SPC), XXXXXXX
     ),
-    [2] = LAYOUT( //裏ショートカット置き場
-        A(KC_GRV), KC_Q, KC_W, KC_E, KC_R, KC_T,         KC_Y, KC_U, KC_I, KC_O, KC_MINS, KC_BSPC,
-        KC_TAB, KC_A, KC_S, KC_D, KC_F, KC_G,             KC_H, KC_J, KC_K, KC_L, KC_P, KC_ENT,            
-        KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B,     KC_B, KC_N, KC_M, KC_COMM, KC_DOT, LT(3, KC_ENT), 
-        KC_LCTL, KC_LGUI, KC_LALT,                                   KC_GRV, KC_SLSH, LT(2, KC_BSLS), 
-                                TG(1), LT(9,KC_INT5),   MO(9), TG(1),
-                        LT(8, KC_SPC), LT(8, KC_SPC), LT(8, KC_SPC), LT(8, KC_SPC)
-    ),
+    [2] = LAYOUT( //イラレ裏ショートカット
+        A(KC_GRV), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL,
+        KC_LSFT, C(KC_A), C(S(KC_S)), C(S(KC_O)), XXXXXXX, C(S(KC_G)),   XXXXXXX, XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, KC_BSPC,            
+        KC_TAB, C(S(KC_Z)), C(KC_2), KC_C, KC_R, KC_L,                   XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_ENT, 
+        KC_LCTL, XXXXXXX, KC_LALT,                                                              KC_RCTL, XXXXXXX, KC_RSFT, 
+                                          XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX,
+                                            MO(2), XXXXXXX,    XXXXXXX, XXXXXXX
+    ),                                       
     [3] = LAYOUT( //
-        A(KC_GRV), KC_Q, KC_W, KC_E, KC_R, KC_T,         KC_Y, KC_U, KC_I, KC_O, KC_MINS, KC_BSPC,
-        KC_TAB, KC_A, KC_S, KC_D, KC_F, KC_G,             KC_H, KC_J, KC_K, KC_L, KC_P, KC_ENT,            
-        KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B,     KC_B, KC_N, KC_M, KC_COMM, KC_DOT, LT(3, KC_ENT), 
-        KC_LCTL, KC_LGUI, KC_LALT,                                   KC_GRV, KC_SLSH, LT(2, KC_BSLS), 
-                                TG(1), LT(9,KC_INT5),   MO(9), TG(1),
-                        LT(8, KC_SPC), LT(8, KC_SPC), LT(8, KC_SPC), LT(8, KC_SPC)
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,        XXXXXXX, KC_4, KC_5, KC_6, XXXXXXX, XXXXXXX,            
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,        XXXXXXX, KC_1, KC_2, KC_3, XXXXXXX, KC_ENT, 
+        XXXXXXX, XXXXXXX, XXXXXXX,                                                              XXXXXXX, MO(3), XXXXXXX, 
+                                               XXXXXXX, XXXXXXX,   XXXXXXX, MO(4),
+                                               XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX
     ),
     [4] = LAYOUT( //
-        A(KC_GRV), KC_Q, KC_W, KC_E, KC_R, KC_T,         KC_Y, KC_U, KC_I, KC_O, KC_MINS, KC_BSPC,
-        KC_TAB, KC_A, KC_S, KC_D, KC_F, KC_G,             KC_H, KC_J, KC_K, KC_L, KC_P, KC_ENT,            
-        KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B,     KC_B, KC_N, KC_M, KC_COMM, KC_DOT, LT(3, KC_ENT), 
-        KC_LCTL, KC_LGUI, KC_LALT,                                   KC_GRV, KC_SLSH, LT(2, KC_BSLS), 
-                                TG(1), LT(9,KC_INT5),   MO(9), TG(1),
-                        LT(8, KC_SPC), LT(8, KC_SPC), LT(8, KC_SPC), LT(8, KC_SPC)
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,        XXXXXXX, KC_4, KC_5, KC_6, XXXXXXX, XXXXXXX,            
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,        XXXXXXX, KC_1, KC_2, KC_3, XXXXXXX, KC_ENT, 
+        XXXXXXX, XXXXXXX, XXXXXXX,                                                              XXXXXXX, MO(3), XXXXXXX, 
+                                               XXXXXXX, XXXXXXX,   XXXXXXX, MO(4),
+                                               XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX
     ),
-    [5] = LAYOUT( //
-        A(KC_GRV), KC_Q, KC_W, KC_E, KC_R, KC_T,         KC_Y, KC_U, KC_I, KC_O, KC_MINS, KC_BSPC,
-        KC_TAB, KC_A, KC_S, KC_D, KC_F, KC_G,             KC_H, KC_J, KC_K, KC_L, KC_P, KC_ENT,            
-        KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B,     KC_B, KC_N, KC_M, KC_COMM, KC_DOT, LT(3, KC_ENT), 
-        KC_LCTL, KC_LGUI, KC_LALT,                                   KC_GRV, KC_SLSH, LT(2, KC_BSLS), 
-                                TG(1), LT(9,KC_INT5),   MO(9), TG(1),
-                        LT(8, KC_SPC), LT(8, KC_SPC), LT(8, KC_SPC), LT(8, KC_SPC)
+    [5] = LAYOUT( //左Caps Lock　右Winコマンド
+        KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,            
+        KC_CAPS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,        C(S(KC_ESC)), LGUI(KC_L), XXXXXXX, XXXXXXX, XXXXXXX, C(A(KC_DEL)), 
+        KC_LCTL, KC_LGUI, KC_LALT,                                                               KC_RCTL, XXXXXXX, KC_RSFT, 
+                                               XXXXXXX, XXXXXXX,   XXXXXXX, MO(5),
+                                               XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX
     ),
-    [6] = LAYOUT( //
-        A(KC_GRV), KC_Q, KC_W, KC_E, KC_R, KC_T,         KC_Y, KC_U, KC_I, KC_O, KC_MINS, KC_BSPC,
-        KC_TAB, KC_A, KC_S, KC_D, KC_F, KC_G,             KC_H, KC_J, KC_K, KC_L, KC_P, KC_ENT,            
-        KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B,     KC_B, KC_N, KC_M, KC_COMM, KC_DOT, LT(3, KC_ENT), 
-        KC_LCTL, KC_LGUI, KC_LALT,                                   KC_GRV, KC_SLSH, LT(2, KC_BSLS), 
-                                TG(1), LT(9,KC_INT5),   MO(9), TG(1),
-                        LT(8, KC_SPC), LT(8, KC_SPC), LT(8, KC_SPC), LT(8, KC_SPC)
+    [6] = LAYOUT( //右テンキー　左アロー
+        A(KC_GRV), KC_ESC, KC_UP, XXXXXXX, XXXXXXX, XXXXXXX,      S(KC_QUOT), KC_7, KC_8, KC_9, KC_MINS, KC_DEL,
+        KC_LSFT, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX,    KC_BSLS, KC_4, KC_5, KC_6, S(KC_SCLN), KC_BSPC,            
+        KC_TAB, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      KC_0, KC_1, KC_2, KC_3, KC_DOT, KC_ENT, 
+        KC_LCTL, KC_LGUI, KC_LALT,                                              KC_RCTL, XXXXXXX, KC_RSFT, 
+                                         XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX,
+                                         XXXXXXX, XXXXXXX,    MO(6), XXXXXXX
     ),
-    [7] = LAYOUT( //
-        A(KC_GRV), KC_Q, KC_W, KC_E, KC_R, KC_T,         KC_Y, KC_U, KC_I, KC_O, KC_MINS, KC_BSPC,
-        KC_TAB, KC_A, KC_S, KC_D, KC_F, KC_G,             KC_H, KC_J, KC_K, KC_L, KC_P, KC_ENT,            
-        KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B,     KC_B, KC_N, KC_M, KC_COMM, KC_DOT, LT(3, KC_ENT), 
-        KC_LCTL, KC_LGUI, KC_LALT,                                   KC_GRV, KC_SLSH, LT(2, KC_BSLS), 
-                                TG(1), LT(9,KC_INT5),   MO(9), TG(1),
-                        LT(8, KC_SPC), LT(8, KC_SPC), LT(8, KC_SPC), LT(8, KC_SPC)
+    [7] = LAYOUT( //Fnキー　左アロー
+        A(KC_GRV), KC_ESC, KC_UP, XXXXXXX, XXXXXXX, XXXXXXX,         KC_F9, KC_F10, KC_F11, KC_F12, XXXXXXX, KC_DEL,
+        KC_LSFT, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX,       KC_F5, KC_F6, KC_F7, KC_F8, XXXXXXX, KC_BSPC,            
+        KC_TAB, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         KC_F1, KC_F2, KC_F3, KC_F4, XXXXXXX, MO(7), 
+        KC_LCTL, KC_LGUI, KC_LALT,                                   KC_RCTL, XXXXXXX, KC_RSFT, 
+                                        MO(7), XXXXXXX,    XXXXXXX, XXXXXXX,
+                                        XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX
     ),
-    [8] = LAYOUT( //記号キー置き場
-        A(KC_GRV), KC_Q, KC_W, KC_E, KC_R, KC_T,         KC_Y, KC_U, KC_I, KC_O, KC_MINS, KC_BSPC,
-        KC_TAB, KC_A, KC_S, KC_D, KC_F, KC_G,             KC_H, KC_J, KC_K, KC_L, KC_P, KC_ENT,            
-        KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B,     KC_B, KC_N, KC_M, KC_COMM, KC_DOT, LT(3, KC_ENT), 
-        KC_LCTL, KC_LGUI, KC_LALT,                                   KC_GRV, KC_SLSH, LT(2, KC_BSLS), 
-                                TG(1), LT(9,KC_INT5),   MO(9), TG(1),
-                        LT(8, KC_SPC), LT(8, KC_SPC), LT(8, KC_SPC), LT(8, KC_SPC)
+    [8] = LAYOUT( //記号キー　右アロー
+        KC_ESC, S(KC_1), S(KC_2), S(KC_3), S(KC_5), S(KC_6),         S(KC_8), S(KC_9), KC_QUOT, KC_SCLN, KC_EQL, KC_DEL,
+        KC_LSFT, XXXXXXX, XXXXXXX, S(KC_7), S(KC_4), KC_GRV,         KC_GRV, KC_LBRC, KC_RBRC, KC_UP, XXXXXXX, KC_BSPC,            
+        KC_TAB, XXXXXXX, XXXXXXX, KC_PGUP, KC_PGDN, KC_PSCR,        XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_BSLS, 
+        KC_LCTL, KC_LGUI, KC_LALT,                                   KC_RCTL, KC_SLSH, KC_RSFT, 
+                                XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX,
+                                MO(8), XXXXXXX,      XXXXXXX, MO(8)
     ),
-    [9] = LAYOUT( //テンキー&ファンクション
-        A(KC_GRV), KC_Q, KC_W, KC_E, KC_R, KC_T,         KC_Y, KC_U, KC_I, KC_O, KC_MINS, KC_BSPC,
-        KC_TAB, KC_A, KC_S, KC_D, KC_F, KC_G,             KC_H, KC_J, KC_K, KC_L, KC_P, KC_ENT,            
-        KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B,     KC_B, KC_N, KC_M, KC_COMM, KC_DOT, LT(3, KC_ENT), 
-        KC_LCTL, KC_LGUI, KC_LALT,                                   KC_GRV, KC_SLSH, LT(2, KC_BSLS), 
-                                TG(1), LT(9,KC_INT5),   MO(9), TG(1),
-                        LT(8, KC_SPC), LT(8, KC_SPC), LT(8, KC_SPC), LT(8, KC_SPC)
+    [9] = LAYOUT( //左テンキー　右アロー
+        A(KC_GRV), S(KC_QUOT), KC_7, KC_8, KC_9, KC_MINS,      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL,
+        KC_LSFT, KC_BSLS, KC_4, KC_5, KC_6, S(KC_SCLN),        XXXXXXX, XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, KC_BSPC,            
+        KC_TAB, KC_0, KC_1, KC_2, KC_3, KC_DOT,                XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_ENT, 
+        KC_LCTL, KC_LGUI, KC_LALT,                                                   KC_RCTL, XXXXXXX, KC_RSFT, 
+                                XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX,
+                                XXXXXXX, MO(9),      XXXXXXX, XXXXXXX
     )
 };
 
