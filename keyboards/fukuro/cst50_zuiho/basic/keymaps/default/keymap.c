@@ -19,7 +19,7 @@ const rgblight_segment_t PROGMEM layer0[] = RGBLIGHT_LAYER_SEGMENTS(
  );
 const rgblight_segment_t PROGMEM layer1[] = RGBLIGHT_LAYER_SEGMENTS(
    {0, 8, HSV_GREEN}, {8, 1, HSV_BLACK}, {9, 4, HSV_SPRINGGREEN}, {13,2, HSV_WHITE}, {15, 10, HSV_SPRINGGREEN},
-   {25, 2, HSV_WHITE}, {27, 1, HSV_BLACK}, {28, 1, HSV_WHITE}, {29, 1, HSV_BLUE}, {30, 1, HSV_GOLD}, {31, 1, HSV_MAGENTA}, {32, 1, HSV_BLUE},  //本体左側
+   {25, 2, HSV_WHITE}, {27, 1, HSV_BLACK}, {28, 1, HSV_WHITE}, {29, 1, HSV_BLUE}, {30, 1, HSV_SPRINGGREEN}, {31, 1, HSV_MAGENTA}, {32, 1, HSV_BLUE},  //本体左側
     {33, 8, HSV_GREEN}, {41, 5, HSV_BLACK}, {46, 2, HSV_GOLD}, {48, 1, HSV_BLACK}, {49, 1, HSV_SPRINGGREEN}, {50, 5, HSV_BLACK},
     {55, 3, HSV_SPRINGGREEN}, {58, 2, HSV_WHITE}, {60, 1, HSV_BLACK}, {61, 1, HSV_WHITE}, {62, 1, HSV_GOLD}, {63, 1, HSV_SPRINGGREEN},
     {64, 1, HSV_MAGENTA}, {65, 1, HSV_BLACK}, //本体右側
@@ -65,7 +65,7 @@ const rgblight_segment_t PROGMEM layer5[] = RGBLIGHT_LAYER_SEGMENTS(
 );
 const rgblight_segment_t PROGMEM layer7[] = RGBLIGHT_LAYER_SEGMENTS(
     {0, 8, HSV_GREEN}, {8, 3, HSV_BLACK}, {11, 2, HSV_SPRINGGREEN}, {13, 2, HSV_WHITE}, {15, 3, HSV_SPRINGGREEN}, {18, 7, HSV_BLACK},
-    {25, 3, HSV_WHITE}, {28, 1, HSV_BLUE}, {29, 3, HSV_BLACK}, //本体左側
+    {25, 4, HSV_WHITE}, {29, 1, HSV_BLUE}, {30, 3, HSV_BLACK}, //本体左側
     {33, 8, HSV_GREEN}, {41, 4, HSV_BLUE}, {45, 1, HSV_BLACK}, {46, 2, HSV_GOLD}, {48, 1, HSV_BLACK}, {49, 8, HSV_BLUE},
     {57, 1, HSV_BLACK}, {58, 1, HSV_BLUE}, {59, 1, HSV_WHITE}, {60, 1, HSV_BLACK}, {61, 1, HSV_WHITE}, {62, 4, HSV_BLACK}, //本体右側
     {66, 2, HSV_BLACK}, {68, 1, HSV_ORANGE}, {69, 7, HSV_BLACK} //レイヤーディスプレイ(66~76)
@@ -212,8 +212,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [8] = LAYOUT( //記号キー　右アロー
         KC_ESC, S(KC_1), S(KC_2), S(KC_3), S(KC_5), S(KC_6),         S(KC_8), S(KC_9), KC_QUOT, KC_SCLN, KC_EQL, KC_DEL,
-        KC_LSFT, XXXXXXX, XXXXXXX, S(KC_7), S(KC_4), KC_GRV,         KC_GRV, KC_LBRC, KC_RBRC, KC_UP, XXXXXXX, KC_BSPC,            
-        KC_TAB, XXXXXXX, XXXXXXX, KC_PGUP, KC_PGDN, KC_PSCR,        XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_BSLS, 
+        KC_LSFT, XXXXXXX, XXXXXXX, S(KC_7), S(KC_4), KC_GRV,         KC_GRV, KC_RBRC, KC_LBRC, KC_UP, XXXXXXX, KC_BSPC,            
+        KC_TAB, XXXXXXX, XXXXXXX, KC_PGUP, KC_PGDN, KC_PSCR,        XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_INT1, 
         KC_LCTL, KC_LGUI, KC_LALT,                                   KC_RCTL, KC_SLSH, KC_RSFT, 
                                 XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX,
                                 MO(8), XXXXXXX,      XXXXXXX, MO(8)
