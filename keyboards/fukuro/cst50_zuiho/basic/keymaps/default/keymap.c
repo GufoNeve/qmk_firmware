@@ -149,23 +149,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT( //ベースレイヤー
         A(KC_GRV), KC_Q, KC_W, KC_E, KC_R, KC_T,         KC_Y, KC_U, KC_I, KC_O, KC_MINS, KC_BSPC,
         KC_LSFT, KC_A, KC_S, KC_D, KC_F, KC_G,             KC_H, KC_J, KC_K, KC_L, KC_P, KC_ENT,            
-        KC_TAB, KC_Z, KC_X, KC_C, KC_V, KC_B,     KC_B, KC_N, KC_M, KC_COMM, KC_DOT, LT(7, KC_ENT), 
+        KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B,     KC_B, KC_N, KC_M, KC_COMM, KC_DOT, LT(7, KC_ENT), 
         KC_LCTL, KC_LGUI, KC_LALT,                                   KC_RCTL, LT(3, KC_SLSH), KC_RSFT, 
                             LT(7,KC_INT5), TG(1),    TG(1), MO(5),
                         LT(8, KC_SPC), LT(9, KC_SPC), LT(6, KC_SPC), LT(8, KC_SPC)
     ),
     [1] = LAYOUT( //イラレショートカット
         A(KC_GRV), KC_ESC, C(A(KC_7)), C(A(KC_8)), C(A(KC_L)), KC_T,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL,
-        KC_LSFT, KC_A, KC_S, S(KC_O), C(S(KC_F)), KC_G,                    XXXXXXX, XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, KC_BSPC,            
-        KC_TAB, KC_Z, C(KC_1), KC_BSLS, KC_V, KC_M,                           XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, LT(7, KC_ENT), 
+        KC_TAB, KC_A, KC_S, S(KC_O), C(S(KC_F)), KC_G,                    XXXXXXX, XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, KC_BSPC,            
+        KC_LSFT, KC_Z, C(KC_1), KC_BSLS, KC_V, KC_M,                           XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, LT(7, KC_ENT), 
         KC_LCTL, XXXXXXX, KC_LALT,                                                                        KC_RCTL, XXXXXXX, KC_RSFT, 
                                                 XXXXXXX, TG(1),    TG(1), MO(5),
                                         LT(2, KC_SPC), LT(9, KC_SPC),    LT(6, KC_SPC), XXXXXXX
     ),
     [2] = LAYOUT( //イラレ裏ショートカット
         A(KC_GRV), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL,
-        KC_LSFT, C(KC_A), C(S(KC_S)), C(S(KC_O)), XXXXXXX, C(S(KC_G)),   XXXXXXX, XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, KC_BSPC,            
-        KC_TAB, C(S(KC_Z)), C(KC_2), KC_C, KC_R, KC_L,                   XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_ENT, 
+        KC_TAB, C(KC_A), C(S(KC_S)), C(S(KC_O)), XXXXXXX, C(S(KC_G)),   XXXXXXX, XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, KC_BSPC,            
+        KC_LSFT, C(S(KC_Z)), C(KC_2), KC_C, KC_R, KC_L,                   XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_ENT, 
         KC_LCTL, XXXXXXX, KC_LALT,                                                              KC_RCTL, XXXXXXX, KC_RSFT, 
                                           XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX,
                                             MO(2), XXXXXXX,    XXXXXXX, XXXXXXX
@@ -196,32 +196,32 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [6] = LAYOUT( //右テンキー　左アロー
         A(KC_GRV), KC_ESC, KC_UP, XXXXXXX, XXXXXXX, XXXXXXX,      S(KC_QUOT), KC_7, KC_8, KC_9, KC_MINS, KC_DEL,
-        KC_LSFT, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX,    KC_BSLS, KC_4, KC_5, KC_6, S(KC_SCLN), KC_BSPC,            
-        KC_TAB, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      KC_0, KC_1, KC_2, KC_3, KC_DOT, KC_ENT, 
+        KC_TAB, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX,    KC_BSLS, KC_4, KC_5, KC_6, S(KC_SCLN), KC_BSPC,            
+        KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      KC_0, KC_1, KC_2, KC_3, KC_DOT, KC_ENT, 
         KC_LCTL, KC_LGUI, KC_LALT,                                              KC_RCTL, XXXXXXX, KC_RSFT, 
                                          XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX,
                                          XXXXXXX, XXXXXXX,    MO(6), XXXXXXX
     ),
     [7] = LAYOUT( //Fnキー　左アロー
         A(KC_GRV), KC_ESC, KC_UP, XXXXXXX, XXXXXXX, XXXXXXX,         KC_F9, KC_F10, KC_F11, KC_F12, XXXXXXX, KC_DEL,
-        KC_LSFT, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX,       KC_F5, KC_F6, KC_F7, KC_F8, XXXXXXX, KC_BSPC,            
-        KC_TAB, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         KC_F1, KC_F2, KC_F3, KC_F4, XXXXXXX, MO(7), 
+        KC_TAB, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX,       KC_F5, KC_F6, KC_F7, KC_F8, XXXXXXX, KC_BSPC,            
+        KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         KC_F1, KC_F2, KC_F3, KC_F4, XXXXXXX, MO(7), 
         KC_LCTL, KC_LGUI, KC_LALT,                                   KC_RCTL, XXXXXXX, KC_RSFT, 
                                         MO(7), XXXXXXX,    XXXXXXX, XXXXXXX,
                                         XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX
     ),
     [8] = LAYOUT( //記号キー　右アロー
         KC_ESC, S(KC_1), S(KC_2), S(KC_3), S(KC_5), S(KC_6),         S(KC_8), S(KC_9), KC_QUOT, KC_SCLN, KC_EQL, KC_DEL,
-        KC_LSFT, XXXXXXX, XXXXXXX, S(KC_7), S(KC_4), KC_GRV,         KC_GRV, KC_RBRC, KC_LBRC, KC_UP, XXXXXXX, KC_BSPC,            
-        KC_TAB, XXXXXXX, XXXXXXX, KC_PGUP, KC_PGDN, KC_PSCR,        XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_INT1, 
+        KC_TAB, XXXXXXX, XXXXXXX, S(KC_7), S(KC_4), KC_GRV,         KC_GRV, KC_RBRC, KC_LBRC, KC_UP, XXXXXXX, KC_BSPC,            
+        KC_LSFT, XXXXXXX, XXXXXXX, KC_PGUP, KC_PGDN, KC_PSCR,        XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_INT1, 
         KC_LCTL, KC_LGUI, KC_LALT,                                   KC_RCTL, KC_SLSH, KC_RSFT, 
                                 XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX,
                                 MO(8), XXXXXXX,      XXXXXXX, MO(8)
     ),
     [9] = LAYOUT( //左テンキー　右アロー
         A(KC_GRV), S(KC_QUOT), KC_7, KC_8, KC_9, KC_MINS,      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL,
-        KC_LSFT, KC_BSLS, KC_4, KC_5, KC_6, S(KC_SCLN),        XXXXXXX, XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, KC_BSPC,            
-        KC_TAB, KC_0, KC_1, KC_2, KC_3, KC_DOT,                XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_ENT, 
+        KC_TAB, KC_BSLS, KC_4, KC_5, KC_6, S(KC_SCLN),        XXXXXXX, XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, KC_BSPC,            
+        KC_LSFT, KC_0, KC_1, KC_2, KC_3, KC_DOT,                XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_ENT, 
         KC_LCTL, KC_LGUI, KC_LALT,                                                   KC_RCTL, XXXXXXX, KC_RSFT, 
                                 XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX,
                                 XXXXXXX, MO(9),      XXXXXXX, XXXXXXX
