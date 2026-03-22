@@ -196,7 +196,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [6] = LAYOUT( //右テンキー　左アロー
         A(KC_GRV), KC_ESC, KC_UP, XXXXXXX, XXXXXXX, XXXXXXX,      S(KC_QUOT), KC_7, KC_8, KC_9, KC_MINS, KC_DEL,
-        KC_TAB, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX,    KC_BSLS, KC_4, KC_5, KC_6, S(KC_SCLN), KC_BSPC,            
+        KC_TAB, KC_LEFT, KC_DOWN, KC_RIGHT, XXXXXXX, XXXXXXX,    KC_INT1, KC_4, KC_5, KC_6, S(KC_SCLN), KC_BSPC,            
         KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,      KC_0, KC_1, KC_2, KC_3, KC_DOT, KC_ENT, 
         KC_LCTL, KC_LGUI, KC_LALT,                                              KC_RCTL, XXXXXXX, KC_RSFT, 
                                          XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX,
@@ -212,7 +212,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [8] = LAYOUT( //記号キー　右アロー
         KC_ESC, S(KC_1), S(KC_2), S(KC_3), S(KC_5), S(KC_6),         S(KC_8), S(KC_9), KC_QUOT, KC_SCLN, KC_EQL, KC_DEL,
-        KC_TAB, XXXXXXX, XXXXXXX, S(KC_7), S(KC_4), KC_GRV,         KC_GRV, KC_RBRC, KC_LBRC, KC_UP, XXXXXXX, KC_BSPC,            
+        KC_TAB, XXXXXXX, XXXXXXX, S(KC_7), S(KC_4), KC_GRV,         KC_GRV, KC_RBRC, KC_BSLS, KC_UP, XXXXXXX, KC_BSPC,            
         KC_LSFT, XXXXXXX, XXXXXXX, KC_PGUP, KC_PGDN, KC_PSCR,        XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_INT1, 
         KC_LCTL, KC_LGUI, KC_LALT,                                   KC_RCTL, KC_SLSH, KC_RSFT, 
                                 XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX,
