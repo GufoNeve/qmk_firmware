@@ -12,7 +12,7 @@ void pointing_device_init_kb(void) {
 
 
 const rgblight_segment_t PROGMEM layer0[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_GREEN}, {8, 1, HSV_WHITE}, //本体左アンダー(0~7)
+    {0, 7, HSV_GREEN}, {7, 1, HSV_WHITE}, //本体左アンダー(0~7)
     {8, 25, HSV_WHITE},  //本体左側(8~28)
     //本体左親指(29~32)
     {33, 7, HSV_GREEN}, {40, 1, HSV_WHITE}, //本体右アンダー(33~40)
@@ -22,11 +22,11 @@ const rgblight_segment_t PROGMEM layer0[] = RGBLIGHT_LAYER_SEGMENTS(
     
  );
 const rgblight_segment_t PROGMEM layer1[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_GREEN}, {8, 1, HSV_WHITE}, //本体左アンダー(0~7)
+    {0, 7, HSV_GREEN}, {7, 1, HSV_GOLD}, //本体左アンダー(0~7)
     {8, 1, HSV_BLACK}, {9, 4, HSV_GOLD}, {13, 1, HSV_WHITE}, {14, 1, HSV_GREEN}, {15, 10, HSV_GOLD},
     {25, 2, HSV_WHITE}, {27, 1, HSV_BLACK}, {28, 1, HSV_WHITE}, //本体左側(8~28)
     {29, 1, HSV_CYAN}, {30, 1, HSV_GOLD}, {31, 1, HSV_MAGENTA}, {32, 1, HSV_CYAN}, //本体左親指(29~32) 
-    {33, 7, HSV_GREEN}, {40, 1, HSV_WHITE}, //本体右アンダー(33~40)
+    {33, 7, HSV_GREEN}, {40, 1, HSV_GOLD}, //本体右アンダー(33~40)
     {41, 5, HSV_BLACK}, {46, 2, HSV_GREEN}, {48, 1, HSV_BLACK}, {49, 1, HSV_GOLD}, {50, 5, HSV_BLACK},
     {55, 3, HSV_GOLD}, {58, 2, HSV_WHITE}, {60, 1, HSV_BLACK}, {61, 1, HSV_WHITE}, //本体右側(41~61)
     {62, 2, HSV_GOLD}, {64, 1, HSV_MAGENTA}, {65, 1, HSV_BLACK}, //本体右親指(62~65)
@@ -34,11 +34,11 @@ const rgblight_segment_t PROGMEM layer1[] = RGBLIGHT_LAYER_SEGMENTS(
                         
 );
 const rgblight_segment_t PROGMEM layer2[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_GREEN}, {8, 1, HSV_WHITE}, //本体左アンダー(0~7)
+    {0, 7, HSV_GREEN}, {7, 1, HSV_BLUE}, //本体左アンダー(0~7)
     {8, 5, HSV_BLACK}, {13, 1, HSV_WHITE}, {14, 1, HSV_GREEN}, {15, 3, HSV_CYAN}, {18, 1, HSV_BLACK}, {19, 6, HSV_CYAN}, {25, 2, HSV_WHITE},
     {27, 1, HSV_BLACK}, {28, 1, HSV_WHITE}, //本体左側(8~28)
     {29, 3, HSV_BLACK}, {32, 1, HSV_CYAN}, //本体左親指(29~32)
-    {33, 7, HSV_GREEN}, {40, 1, HSV_WHITE}, //本体右アンダー(33~40)
+    {33, 7, HSV_GREEN}, {40, 1, HSV_BLUE}, //本体右アンダー(33~40)
     {41, 5, HSV_BLACK}, {46, 2, HSV_GOLD}, {48, 1, HSV_BLACK}, {49, 1, HSV_GOLD}, {50, 5, HSV_BLACK},
     {55, 3, HSV_GOLD}, {58, 2, HSV_WHITE}, {60, 1, HSV_BLACK}, {61, 1, HSV_WHITE}, //本体右側(41~61)
     {62, 4, HSV_BLACK}, //本体右親指(62~65)
@@ -46,7 +46,7 @@ const rgblight_segment_t PROGMEM layer2[] = RGBLIGHT_LAYER_SEGMENTS(
                   
 );
 const rgblight_segment_t PROGMEM layer3[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_GREEN}, {8, 1, HSV_WHITE}, //本体左アンダー(0~7)
+    {0, 7, HSV_GREEN}, {7, 1, HSV_WHITE}, //本体左アンダー(0~7)
     {8, 25, HSV_BLACK},  //本体左側(8~28)
     //本体左親指(29~32)
     {33, 7, HSV_GREEN}, {40, 1, HSV_WHITE}, //本体右アンダー(33~40)
@@ -57,20 +57,20 @@ const rgblight_segment_t PROGMEM layer3[] = RGBLIGHT_LAYER_SEGMENTS(
                 
 );
 const rgblight_segment_t PROGMEM layer4[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_GREEN}, {8, 1, HSV_WHITE}, //本体左アンダー(0~7)
+    {0, 7, HSV_GREEN}, {7, 1, HSV_RED}, //本体左アンダー(0~7)
     {8, 25, HSV_BLACK},  //本体左側(8~28)
     {33, 7, HSV_GREEN}, {40, 1, HSV_WHITE}, //本体右アンダー(33~40)
     {41, 8, HSV_BLACK}, {49, 3, HSV_RED}, {52, 2, HSV_BLACK}, {54, 3, HSV_RED}, {57, 1, HSV_BLACK}, {58, 1, HSV_WHITE},
-    {59, 1, HSV_BLACK}, {60, 1, HSV_WHITE}, {61, 1, HSV_BLACK}, //本体右側(41~61)
+    {59, 1, HSV_BLACK}, {60, 1, HSV_RED}, {61, 1, HSV_BLACK}, //本体右側(41~61)
     {62, 1, HSV_RED}, {63, 3, HSV_BLACK}, //本体右親指(62~65)
     {66, 6, HSV_BLACK}, {72, 1, HSV_ORANGE}, {73, 3, HSV_BLACK} //レイヤーディスプレイ(66~76)
                 
  );
 const rgblight_segment_t PROGMEM layer5[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_GREEN}, {8, 1, HSV_WHITE}, //本体左アンダー(0~7)
+    {0, 7, HSV_GREEN}, {7, 1, HSV_RED}, //本体左アンダー(0~7)
     {8, 5, HSV_BLACK}, {13, 2, HSV_GREEN}, {15, 10, HSV_BLACK}, {25, 1, HSV_RED}, {26, 3, HSV_WHITE},//本体左側(8~28)   
     {29, 4, HSV_BLACK}, //本体左親指(29~32)
-    {33, 7, HSV_GREEN}, {40, 1, HSV_WHITE}, //本体右アンダー(33~40)
+    {33, 7, HSV_GREEN}, {40, 1, HSV_RED}, //本体右アンダー(33~40)
     {41, 4, HSV_BLACK}, {45, 1, HSV_MAGENTA}, {46, 2, HSV_BLACK}, {48, 1, HSV_MAGENTA}, {49, 4, HSV_BLACK}, {53, 2, HSV_GREEN}, {55, 3, HSV_BLACK}, 
     {58, 1, HSV_RED}, {59, 1, HSV_WHITE}, {60, 1, HSV_BLACK}, {61, 1, HSV_WHITE}, //本体右側(41~61)
     {62, 1, HSV_GOLD}, {63, 3, HSV_BLACK}, //本体右親指(62~65)
@@ -78,22 +78,22 @@ const rgblight_segment_t PROGMEM layer5[] = RGBLIGHT_LAYER_SEGMENTS(
               
  );
  const rgblight_segment_t PROGMEM layer6[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_GREEN}, {8, 1, HSV_WHITE}, //本体左アンダー(0~7)
-    {8, 3, HSV_BLACK}, {11, 2, HSV_GOLD}, {13, 1, HSV_WHITE}, {14, 1, HSV_GREEN}, {15, 3, HSV_GOLD}, {18, 1, HSV_BLACK},
-    {19, 2, HSV_MAGENTA}, {21, 4, HSV_BLACK}, {25, 4, HSV_WHITE}, //本体左側(8~28)
+    {0, 7, HSV_GREEN}, {7, 1, HSV_MAGENTA}, //本体左アンダー(0~7)
+    {8, 3, HSV_BLACK}, {11, 2, HSV_GOLD}, {13, 1, HSV_WHITE}, {14, 1, HSV_GREEN}, {15, 3, HSV_GOLD}, 
+    {18, 7, HSV_BLACK}, {25, 4, HSV_WHITE}, //本体左側(8~28)
     {29, 4, HSV_BLACK}, //本体左親指(29~32)
-    {33, 7, HSV_GREEN}, {40, 1, HSV_WHITE},  //本体右アンダー(33~40)
+    {33, 7, HSV_GREEN}, {40, 1, HSV_MAGENTA},  //本体右アンダー(33~40)
     {41, 5, HSV_MAGENTA}, {46, 2, HSV_GREEN}, {48, 10, HSV_MAGENTA}, {58, 2, HSV_WHITE}, {60, 1, HSV_BLACK}, {61, 1, HSV_WHITE},//本体右側(41~61)
     {62, 2, HSV_BLACK}, {64, 1, HSV_MAGENTA}, {65, 1, HSV_BLACK}, //本体右親指(62~65)
     {66, 9, HSV_BLACK}, {75, 1, HSV_ORANGE} //レイヤーディスプレイ(66~76)
     
 );
 const rgblight_segment_t PROGMEM layer7[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_GREEN}, {8, 1, HSV_WHITE}, //本体左アンダー(0~7)
-    {8, 1, HSV_MAGENTA}, {9, 2, HSV_BLACK},{11, 2, HSV_SPRINGGREEN}, {13, 1, HSV_WHITE}, {14, 1, HSV_GREEN}, 
-    {15, 3, HSV_SPRINGGREEN}, {18, 7, HSV_BLACK}, {25, 4, HSV_WHITE}, //本体左側(8~28)
+    {0, 7, HSV_GREEN}, {7, 1, HSV_BLUE}, //本体左アンダー(0~7)
+    {8, 1, HSV_MAGENTA}, {9, 2, HSV_BLACK},{11, 2, HSV_GOLD}, {13, 1, HSV_WHITE}, {14, 1, HSV_GREEN}, {15, 3, HSV_GOLD}, {18, 1, HSV_BLACK},
+    {19, 2, HSV_MAGENTA}, {21, 4, HSV_BLACK}, {25, 4, HSV_WHITE}, //本体左側(8~28)
     {29, 1, HSV_CYAN}, {30, 3, HSV_BLACK}, //本体左親指(29~32)
-    {33, 7, HSV_GREEN}, {40, 1, HSV_WHITE}, //本体右アンダー(33~40)
+    {33, 7, HSV_GREEN}, {40, 1, HSV_BLUE}, //本体右アンダー(33~40)
     {41, 4, HSV_CYAN}, {45, 1, HSV_BLACK}, {46, 2, HSV_GOLD}, {48, 1, HSV_BLACK}, {49, 8, HSV_CYAN},
     {57, 1, HSV_BLACK}, {58, 1, HSV_CYAN}, {59, 1, HSV_WHITE}, {60, 1, HSV_BLACK}, {61, 1, HSV_WHITE}, //本体右側(41~61)
     {62, 4, HSV_BLACK}, //本体右親指(62~65)
@@ -101,10 +101,10 @@ const rgblight_segment_t PROGMEM layer7[] = RGBLIGHT_LAYER_SEGMENTS(
     
 );
 const rgblight_segment_t PROGMEM layer8[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_GREEN}, {8, 1, HSV_WHITE}, //本体左アンダー(0~7)
+    {0, 7, HSV_GREEN}, {7, 1, HSV_GREEN}, //本体左アンダー(0~7)
     {8, 6, HSV_GREEN}, {14, 1, HSV_WHITE}, {15, 2, HSV_BLACK}, {17, 6, HSV_GREEN}, {23, 2, HSV_BLACK}, {25, 4, HSV_WHITE},//本体左側(8~28)
     {29, 2, HSV_BLACK}, {31, 1, HSV_GREEN}, {32, 1, HSV_BLACK}, //本体左親指(29~32)
-    {33, 7, HSV_GREEN}, {40, 1, HSV_WHITE}, //本体右アンダー(33~40)
+    {33, 7, HSV_GREEN}, {40, 1, HSV_GREEN}, //本体右アンダー(33~40)
     {41, 7, HSV_GREEN}, {48, 1, HSV_BLACK}, {49, 1, HSV_GOLD}, {50, 3, HSV_GREEN}, {53, 2, HSV_BLACK},
     {55, 3, HSV_GOLD}, {58, 1, HSV_GREEN}, {59, 3, HSV_WHITE}, //本体右側(41~61)
     {62, 3, HSV_BLACK}, {65, 1, HSV_GREEN}, //本体右親指(62~65)
@@ -112,10 +112,10 @@ const rgblight_segment_t PROGMEM layer8[] = RGBLIGHT_LAYER_SEGMENTS(
     
 );
 const rgblight_segment_t PROGMEM layer9[] = RGBLIGHT_LAYER_SEGMENTS(
-    {0, 7, HSV_GREEN}, {8, 1, HSV_WHITE}, //本体左アンダー(0~7)
+    {0, 7, HSV_GREEN}, {7, 1, HSV_MAGENTA}, //本体左アンダー(0~7)
     {8, 5, HSV_MAGENTA}, {13, 1, HSV_WHITE}, {14, 1, HSV_GREEN}, {15, 10, HSV_MAGENTA}, {25, 4, HSV_WHITE}, //本体左側(8~28)
     {29, 3, HSV_BLACK}, {32, 1, HSV_MAGENTA}, //本体左親指(29~32)
-    {33, 7, HSV_GREEN}, {40, 1, HSV_WHITE}, //本体右アンダー(33~40)
+    {33, 7, HSV_GREEN}, {40, 1, HSV_MAGENTA}, //本体右アンダー(33~40)
     {41, 5, HSV_BLACK}, {46, 2, HSV_GREEN}, {48, 1, HSV_BLACK}, {49, 1, HSV_GOLD}, {50, 5, HSV_BLACK},
     {55, 3, HSV_GOLD}, {58, 2, HSV_WHITE}, {60, 1, HSV_BLACK}, {61, 1, HSV_WHITE}, //本体右側(41~61)
     {62, 4, HSV_BLACK}, //本体右親指(62~65)
@@ -199,7 +199,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [2] = LAYOUT( //イラレ裏ショートカット
         A(KC_GRV), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL,
-        KC_TAB, C(KC_A), LCS(KC_S), LCS(KC_O), XXXXXXX, LC(SKC_G),   XXXXXXX, XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, KC_BSPC,            
+        KC_TAB, C(KC_A), LCS(KC_S), LCS(KC_O), XXXXXXX, LCS(KC_G),   XXXXXXX, XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, KC_BSPC,            
         KC_LSFT, LCS(KC_Z), C(KC_2), KC_C, KC_R, KC_L,                   XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_ENT, 
         KC_LCTL, XXXXXXX, KC_LALT,                                                              KC_RCTL, XXXXXXX, KC_RSFT, 
                                           XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX,
@@ -222,8 +222,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                XXXXXXX, XXXXXXX,   XXXXXXX, XXXXXXX
     ),
     [5] = LAYOUT( //左Caps Lock　右Winコマンド
-        KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, UG_VALD, XXXXXXX,
-        KC_TAB, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, UG_VALU, XXXXXXX,            
+        KC_ESC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, BL_DOWN, XXXXXXX,
+        KC_TAB, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, BL_UP, XXXXXXX,            
         KC_CAPS, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,        LCS(KC_ESC), LGUI(KC_L), XXXXXXX, XXXXXXX, XXXXXXX, LCA(KC_DEL), 
         KC_LCTL, KC_LGUI, KC_LALT,                                                               KC_RCTL, XXXXXXX, KC_RSFT, 
                                                XXXXXXX, XXXXXXX,   XXXXXXX, MO(5),
