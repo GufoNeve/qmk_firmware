@@ -25,7 +25,7 @@ const rgblight_segment_t PROGMEM layer1[] = RGBLIGHT_LAYER_SEGMENTS(
     {0, 7, HSV_RED}, {7, 1, HSV_GOLD}, //本体左アンダー(0~7)
     {8, 1, HSV_BLACK}, {9, 4, HSV_GOLD}, {13, 1, HSV_WHITE}, {14, 1, HSV_GREEN}, {15, 10, HSV_GOLD},
     {25, 2, HSV_WHITE}, {27, 1, HSV_BLACK}, {28, 1, HSV_WHITE}, //本体左側(8~28)
-    {29, 1, HSV_CYAN}, {30, 1, HSV_GOLD}, {31, 1, HSV_MAGENTA}, {32, 1, HSV_CYAN}, //本体左親指(29~32) 
+    {29, 1, HSV_CYAN}, {30, 1, HSV_GOLD}, {31, 1, HSV_CYAN}, {32, 1, HSV_MAGENTA}, //本体左親指(29~32) 
     {33, 7, HSV_RED}, {40, 1, HSV_GOLD}, //本体右アンダー(33~40)
     {41, 5, HSV_BLACK}, {46, 2, HSV_GREEN}, {48, 1, HSV_BLACK}, {49, 1, HSV_GOLD}, {50, 5, HSV_BLACK},
     {55, 3, HSV_GOLD}, {58, 2, HSV_WHITE}, {60, 1, HSV_BLACK}, {61, 1, HSV_WHITE}, //本体右側(41~61)
@@ -37,7 +37,7 @@ const rgblight_segment_t PROGMEM layer2[] = RGBLIGHT_LAYER_SEGMENTS(
     {0, 7, HSV_RED}, {7, 1, HSV_BLUE}, //本体左アンダー(0~7)
     {8, 5, HSV_BLACK}, {13, 1, HSV_WHITE}, {14, 1, HSV_GREEN}, {15, 3, HSV_CYAN}, {18, 1, HSV_BLACK}, {19, 6, HSV_CYAN}, {25, 2, HSV_WHITE},
     {27, 1, HSV_BLACK}, {28, 1, HSV_WHITE}, //本体左側(8~28)
-    {29, 3, HSV_BLACK}, {32, 1, HSV_CYAN}, //本体左親指(29~32)
+    {29, 2, HSV_BLACK}, {31, 1, HSV_CYAN}, {32, 1, HSV_BLACK}, //本体左親指(29~32)
     {33, 7, HSV_RED}, {40, 1, HSV_BLUE}, //本体右アンダー(33~40)
     {41, 5, HSV_BLACK}, {46, 2, HSV_GOLD}, {48, 1, HSV_BLACK}, {49, 1, HSV_GOLD}, {50, 5, HSV_BLACK},
     {55, 3, HSV_GOLD}, {58, 2, HSV_WHITE}, {60, 1, HSV_BLACK}, {61, 1, HSV_WHITE}, //本体右側(41~61)
@@ -199,7 +199,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [2] = LAYOUT( //イラレ裏ショートカット
         A(KC_GRV), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL,
-        KC_TAB, C(KC_A), LCS(KC_S), LCS(KC_O), XXXXXXX, LCS(KC_G),   XXXXXXX, XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, KC_BSPC,            
+        KC_TAB, C(KC_A), A(KC_S), A(KC_O), XXXXXXX, LCS(KC_G),   XXXXXXX, XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, KC_BSPC,            
         KC_LSFT, LCS(KC_Z), C(KC_2), KC_C, KC_R, KC_L,                   XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_ENT, 
         KC_LCTL, XXXXXXX, KC_LALT,                                                              KC_RCTL, XXXXXXX, KC_RSFT, 
                                           XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX,
@@ -247,7 +247,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [8] = LAYOUT( //記号キー　右アロー
         KC_ESC, S(KC_1), S(KC_2), S(KC_3), S(KC_5), S(KC_6),         S(KC_8), S(KC_9), KC_QUOT, KC_SCLN, KC_EQL, KC_DEL,
-        KC_LSFT, XXXXXXX, XXXXXXX, S(KC_7), S(KC_4), KC_GRV,         KC_GRV, KC_RBRC, KC_BSLS, KC_UP, XXXXXXX, KC_BSPC,            
+        KC_LSFT, XXXXXXX, XXXXXXX, S(KC_7), S(KC_4), KC_LBRC,        KC_LBRC, KC_RBRC, KC_BSLS, KC_UP, XXXXXXX, KC_BSPC,            
         KC_LSFT, XXXXXXX, XXXXXXX, KC_PGUP, KC_PGDN, KC_PSCR,        XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_INT1, 
         KC_LCTL, KC_LGUI, KC_LALT,                                   KC_RCTL, KC_SLSH, KC_RSFT, 
                                 XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX,
