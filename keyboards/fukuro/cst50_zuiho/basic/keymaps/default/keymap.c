@@ -191,7 +191,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [1] = LAYOUT( //イラレショートカット
         A(KC_GRV), KC_ESC, LCA(KC_7), LCA(KC_8), LCA(KC_L), KC_T,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL,
-        KC_TAB, KC_A, KC_S, S(KC_O), LCS(KC_F), KC_G,                    XXXXXXX, XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, KC_BSPC,            
+        KC_TAB, KC_A, KC_S, S(KC_O), A(KC_F), KC_G,                    XXXXXXX, XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, KC_BSPC,            
         KC_LSFT, KC_Z, C(KC_1), KC_BSLS, KC_V, KC_M,                           XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, LT(7, KC_ENT), 
         KC_LCTL, XXXXXXX, KC_LALT,                                                                        KC_RCTL, XXXXXXX, KC_RSFT, 
                                         MO(7), TG(1),                    TG(1), MO(5),
@@ -199,7 +199,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [2] = LAYOUT( //イラレ裏ショートカット
         A(KC_GRV), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL,
-        KC_TAB, C(KC_A), A(KC_S), A(KC_O), XXXXXXX, LCS(KC_G),   XXXXXXX, XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, KC_BSPC,            
+        KC_TAB, C(KC_A), LCS(KC_S), A(KC_O), XXXXXXX, LCS(KC_G),   XXXXXXX, XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, KC_BSPC,            
         KC_LSFT, LCS(KC_Z), C(KC_2), KC_C, KC_R, KC_L,                   XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_ENT, 
         KC_LCTL, XXXXXXX, KC_LALT,                                                              KC_RCTL, XXXXXXX, KC_RSFT, 
                                           XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX,
