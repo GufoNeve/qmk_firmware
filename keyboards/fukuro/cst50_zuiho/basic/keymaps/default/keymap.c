@@ -35,7 +35,7 @@ const rgblight_segment_t PROGMEM layer1[] = RGBLIGHT_LAYER_SEGMENTS(
 );
 const rgblight_segment_t PROGMEM layer2[] = RGBLIGHT_LAYER_SEGMENTS(
     {0, 7, HSV_RED}, {7, 1, HSV_BLUE}, //本体左アンダー(0~7)
-    {8, 5, HSV_BLACK}, {13, 1, HSV_WHITE}, {14, 1, HSV_GREEN}, {15, 3, HSV_CYAN}, {18, 1, HSV_BLACK}, {19, 6, HSV_CYAN}, {25, 2, HSV_WHITE},
+    {8, 5, HSV_BLACK}, {13, 1, HSV_WHITE}, {14, 1, HSV_GREEN}, {15, 10, HSV_CYAN}, {25, 2, HSV_WHITE},
     {27, 1, HSV_BLACK}, {28, 1, HSV_WHITE}, //本体左側(8~28)
     {29, 2, HSV_BLACK}, {31, 1, HSV_CYAN}, {32, 1, HSV_BLACK}, //本体左親指(29~32)
     {33, 7, HSV_RED}, {40, 1, HSV_BLUE}, //本体右アンダー(33~40)
@@ -199,7 +199,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [2] = LAYOUT( //イラレ裏ショートカット
         A(KC_GRV), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL,
-        KC_TAB, C(KC_A), LCS(KC_S), A(KC_O), XXXXXXX, LCS(KC_G),   XXXXXXX, XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, KC_BSPC,            
+        KC_TAB, C(KC_A), LCS(KC_S), A(KC_O), C(KC_N), LCS(KC_G),   XXXXXXX, XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, KC_BSPC,            
         KC_LSFT, LCS(KC_Z), C(KC_2), KC_C, KC_R, KC_L,                   XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, KC_ENT, 
         KC_LCTL, XXXXXXX, KC_LALT,                                                              KC_RCTL, XXXXXXX, KC_RSFT, 
                                           XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX,

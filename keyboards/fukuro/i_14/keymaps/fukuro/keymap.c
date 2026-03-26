@@ -190,12 +190,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [5] = LAYOUT( //イラレ用1
         KC_V,             MS_BTN2, KC_BSPC,   
-        LALT(KC_LEFT), C(KC_1), KC_INT3, LT(6, KC_M), KC_ENT,
+        LALT(KC_LEFT), C(KC_Z), LCS(KC_Z), LT(6, KC_M), KC_ENT,
         LT(8, MS_BTN1), MS_BTN1, TG(5), KC_TAB, 
         LT(7, KC_SPC), MS_BTN3
     ),
     [6] = LAYOUT( //イラレ用2
-        KC_A,             XXXXXXX, KC_DEL,   
+        KC_A,             KC_C, KC_DEL,   
         KC_C, C(KC_2), KC_L, MO(6), KC_ENT,
         C(KC_C), C(KC_V), XXXXXXX, XXXXXXX, 
         LT(9, KC_SPC), C(KC_X)
@@ -208,13 +208,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [8] = LAYOUT( //イラレ用4
         A(KC_GRV),             A(KC_F), A(KC_O),   
-        KC_ESC, LCS(KC_N), S(KC_O), S(KC_N), XXXXXXX,
-        MO(8), XXXXXXX, XXXXXXX, XXXXXXX, 
+        KC_ESC, C(KC_N), S(KC_O), LCA(KC_L), KC_ENT,
+        MO(8), XXXXXXX, LCA(KC_7), LCA(KC_8), 
         XXXXXXX, XXXXXXX
     ),
     [9] = LAYOUT( //イラレ用5
         KC_G,             XXXXXXX, XXXXXXX,   
-        LCS(KC_G), C(KC_Z), LCS(KC_Z), XXXXXXX, XXXXXXX,
+        LCS(KC_G), C(KC_1), C(KC_2), XXXXXXX, XXXXXXX,
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, 
         MO(6), XXXXXXX
     )
