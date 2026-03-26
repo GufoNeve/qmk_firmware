@@ -196,7 +196,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [6] = LAYOUT( //イラレ用2
         KC_A,             KC_C, KC_DEL,   
-        KC_C, C(KC_2), KC_L, MO(6), KC_ENT,
+        KC_PSCR, C(KC_2), KC_L, MO(6), KC_ENT,
         C(KC_C), C(KC_V), XXXXXXX, XXXXXXX, 
         LT(9, KC_SPC), C(KC_X)
     ),
