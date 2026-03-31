@@ -192,7 +192,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [1] = LAYOUT( //イラレショートカット
         A(KC_GRV), KC_ESC, LCA(KC_7), LCA(KC_8), LCA(KC_L), KC_T,       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL,
         KC_TAB, KC_A, KC_S, S(KC_O), A(KC_F), KC_G,                    XXXXXXX, XXXXXXX, XXXXXXX, KC_UP, XXXXXXX, KC_BSPC,            
-        KC_LSFT, KC_Z, C(KC_1), KC_BSLS, KC_V, KC_M,                           XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, LT(7, KC_ENT), 
+        KC_LSFT, KC_Z, C(KC_1), KC_INT1, KC_V, KC_M,                           XXXXXXX, XXXXXXX, KC_LEFT, KC_DOWN, KC_RIGHT, LT(7, KC_ENT), 
         KC_LCTL, XXXXXXX, KC_LALT,                                                                        KC_RCTL, XXXXXXX, KC_RSFT, 
                                         MO(7), TG(1),                    TG(1), MO(5),
                                         LT(9, KC_SPC), LT(2, KC_SPC),    LT(6, KC_SPC), XXXXXXX
